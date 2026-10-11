@@ -18,13 +18,22 @@
             "media_type_1": "image",
             "image_1": "shopify://shop_images/beautybag-hero-nero.jpg",
             "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
             "horizontal_alignment_flex_direction_column": "flex-start",
             "vertical_alignment_flex_direction_column": "flex-end",
             "gap": 12,
-            "padding-inline-start": 48,
-            "padding-inline-end": 48,
+            "background_color": "",
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
             "padding-block-start": 32,
-            "padding-block-end": 40
+            "padding-block-end": 40,
+            "padding-inline-start": 48,
+            "padding-inline-end": 48
           },
           "blocks": {
             "btn": {
@@ -32,11 +41,18 @@
               "settings": {
                 "label": "Разгледай колекцията",
                 "link": "shopify://collections/all",
+                "open_in_new_tab": false,
                 "style_class": "button-custom",
                 "custom_button_background": "{{ settings.color_palette.color1 }}",
                 "custom_button_text": "{{ settings.color_palette.background }}",
-                "custom_button_border": "{{ settings.color_palette.color1 }}"
-              }
+                "custom_button_border": "{{ settings.color_palette.color1 }}",
+                "link_text_color": "",
+                "width": "fit-content",
+                "custom_width": 100,
+                "width_mobile": "fit-content",
+                "custom_width_mobile": 100
+              },
+              "blocks": {}
             }
           },
           "block_order": [
@@ -49,13 +65,22 @@
             "media_type_1": "image",
             "image_1": "shopify://shop_images/beautybag-hero-bianco.jpg",
             "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
             "horizontal_alignment_flex_direction_column": "flex-start",
             "vertical_alignment_flex_direction_column": "flex-end",
             "gap": 12,
-            "padding-inline-start": 48,
-            "padding-inline-end": 48,
+            "background_color": "",
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
             "padding-block-start": 32,
-            "padding-block-end": 40
+            "padding-block-end": 40,
+            "padding-inline-start": 48,
+            "padding-inline-end": 48
           },
           "blocks": {
             "btn": {
@@ -63,11 +88,18 @@
               "settings": {
                 "label": "Открий своя аромат",
                 "link": "shopify://collections/all",
+                "open_in_new_tab": false,
                 "style_class": "button-custom",
                 "custom_button_background": "{{ settings.color_palette.color1 }}",
                 "custom_button_text": "{{ settings.color_palette.background }}",
-                "custom_button_border": "{{ settings.color_palette.color1 }}"
-              }
+                "custom_button_border": "{{ settings.color_palette.color1 }}",
+                "link_text_color": "",
+                "width": "fit-content",
+                "custom_width": 100,
+                "width_mobile": "fit-content",
+                "custom_width_mobile": 100
+              },
+              "blocks": {}
             }
           },
           "block_order": [
@@ -82,14 +114,188 @@
       "settings": {
         "display_mode": "full_frame",
         "section_width": "full-width",
+        "full_frame_on_mobile": false,
+        "slideshow_gap": 12,
+        "corner_radius": 0,
         "slide_height": "large",
         "content_position": "on-media",
+        "background_color": "{{ settings.color_palette.background }}",
+        "icons_style": "arrows_large",
+        "icons_shape": "none",
         "slideshow_controls_style": "dots",
         "autoplay": true,
         "autoplay_speed": 6,
-        "background_color": "{{ settings.color_palette.background }}",
         "padding-block-start": 0,
         "padding-block-end": 0
+      }
+    },
+    "intro_bb": {
+      "type": "section",
+      "blocks": {
+        "h1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Луксозни италиански парфюми с 30% чиста френска есенция</p>",
+            "width": "fill",
+            "max_width": "normal",
+            "alignment": "center",
+            "type_preset": "h1",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "text_color": "{{ settings.color_palette.foreground }}",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "sub": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Открийте магията на висшата парфюмерия с Extrait de Parfum. 100% Произведено в Италия, с дълготрайност над 12 часа.</p>",
+            "width": "fill",
+            "max_width": "normal",
+            "alignment": "center",
+            "type_preset": "rte",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "text_color": "{{ settings.color_palette.foreground }}",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "btns": {
+          "type": "group",
+          "settings": {
+            "content_direction": "row",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "center",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "center",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 16,
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "background_media": "none",
+            "background_color": "",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_color": "",
+            "border_radius": 0,
+            "link": "",
+            "open_in_new_tab": false,
+            "placeholder": "",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "b1": {
+              "type": "button",
+              "settings": {
+                "label": "Разгледай колекцията",
+                "link": "shopify://collections/all",
+                "open_in_new_tab": false,
+                "style_class": "button-custom",
+                "custom_button_background": "{{ settings.color_palette.color1 }}",
+                "custom_button_text": "{{ settings.color_palette.background }}",
+                "custom_button_border": "{{ settings.color_palette.color1 }}",
+                "link_text_color": "",
+                "width": "fit-content",
+                "custom_width": 100,
+                "width_mobile": "fit-content",
+                "custom_width_mobile": 100
+              },
+              "blocks": {}
+            },
+            "b2": {
+              "type": "button",
+              "settings": {
+                "label": "Открий своя аромат",
+                "link": "/search",
+                "open_in_new_tab": false,
+                "style_class": "button-custom",
+                "custom_button_background": "rgba(0,0,0,0)",
+                "custom_button_text": "{{ settings.color_palette.foreground }}",
+                "custom_button_border": "{{ settings.color_palette.foreground }}",
+                "link_text_color": "",
+                "width": "fit-content",
+                "custom_width": 100,
+                "width_mobile": "fit-content",
+                "custom_width_mobile": 100
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "b1",
+            "b2"
+          ]
+        }
+      },
+      "block_order": [
+        "h1",
+        "sub",
+        "btns"
+      ],
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 20,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "background_media": "none",
+        "background_color": "{{ settings.color_palette.color2 }}",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_color": "",
+        "border_radius": 0,
+        "padding-block-start": 56,
+        "padding-block-end": 56
       }
     },
     "trust_bb": {
@@ -100,9 +306,25 @@
           "settings": {
             "text": "<p>Защо да изберете нас</p>",
             "width": "fill",
+            "max_width": "normal",
             "alignment": "center",
-            "type_preset": "h2"
-          }
+            "type_preset": "h2",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "text_color": "",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
         },
         "t_row": {
           "type": "group",
@@ -111,16 +333,75 @@
             "vertical_on_mobile": true,
             "horizontal_alignment": "center",
             "vertical_alignment": "flex-start",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
             "gap": 32,
-            "width": "fill"
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "background_media": "none",
+            "background_color": "",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_color": "",
+            "border_radius": 0,
+            "link": "",
+            "open_in_new_tab": false,
+            "placeholder": "",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
           },
           "blocks": {
             "c1": {
               "type": "group",
               "settings": {
                 "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
                 "horizontal_alignment_flex_direction_column": "center",
-                "gap": 10
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 10,
+                "width": "fill",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "background_media": "none",
+                "background_color": "",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_color": "",
+                "border_radius": 0,
+                "link": "",
+                "open_in_new_tab": false,
+                "placeholder": "",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
               },
               "blocks": {
                 "i": {
@@ -128,26 +409,61 @@
                   "settings": {
                     "icon": "star",
                     "width": 40,
-                    "icon_color": "#BFA06A"
-                  }
+                    "link": "",
+                    "open_in_new_tab": false,
+                    "icon_color": "#bfa06a"
+                  },
+                  "blocks": {}
                 },
                 "t": {
                   "type": "text",
                   "settings": {
                     "text": "<p><strong>100% Made in Italy</strong></p>",
                     "width": "fill",
+                    "max_width": "normal",
                     "alignment": "center",
-                    "type_preset": "h5"
-                  }
+                    "type_preset": "h5",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 },
                 "d": {
                   "type": "text",
                   "settings": {
                     "text": "<p>Произведено, бутилирано и сертифицирано в Италия съгласно европейските стандарти.</p>",
                     "width": "fill",
+                    "max_width": "normal",
                     "alignment": "center",
-                    "type_preset": "rte"
-                  }
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 }
               },
               "block_order": [
@@ -160,8 +476,39 @@
               "type": "group",
               "settings": {
                 "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
                 "horizontal_alignment_flex_direction_column": "center",
-                "gap": 10
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 10,
+                "width": "fill",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "background_media": "none",
+                "background_color": "",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_color": "",
+                "border_radius": 0,
+                "link": "",
+                "open_in_new_tab": false,
+                "placeholder": "",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
               },
               "blocks": {
                 "i": {
@@ -169,26 +516,61 @@
                   "settings": {
                     "icon": "perfume",
                     "width": 40,
-                    "icon_color": "#BFA06A"
-                  }
+                    "link": "",
+                    "open_in_new_tab": false,
+                    "icon_color": "#bfa06a"
+                  },
+                  "blocks": {}
                 },
                 "t": {
                   "type": "text",
                   "settings": {
                     "text": "<p><strong>30% Френска Есенция</strong></p>",
                     "width": "fill",
+                    "max_width": "normal",
                     "alignment": "center",
-                    "type_preset": "h5"
-                  }
+                    "type_preset": "h5",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 },
                 "d": {
                   "type": "text",
                   "settings": {
                     "text": "<p>Extrait de Parfum с най-висока концентрация на чисти есенции от Грас, Франция.</p>",
                     "width": "fill",
+                    "max_width": "normal",
                     "alignment": "center",
-                    "type_preset": "rte"
-                  }
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 }
               },
               "block_order": [
@@ -201,8 +583,39 @@
               "type": "group",
               "settings": {
                 "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
                 "horizontal_alignment_flex_direction_column": "center",
-                "gap": 10
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 10,
+                "width": "fill",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "background_media": "none",
+                "background_color": "",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_color": "",
+                "border_radius": 0,
+                "link": "",
+                "open_in_new_tab": false,
+                "placeholder": "",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
               },
               "blocks": {
                 "i": {
@@ -210,26 +623,61 @@
                   "settings": {
                     "icon": "truck",
                     "width": 40,
-                    "icon_color": "#BFA06A"
-                  }
+                    "link": "",
+                    "open_in_new_tab": false,
+                    "icon_color": "#bfa06a"
+                  },
+                  "blocks": {}
                 },
                 "t": {
                   "type": "text",
                   "settings": {
                     "text": "<p><strong>Преглед & Наложен платеж</strong></p>",
                     "width": "fill",
+                    "max_width": "normal",
                     "alignment": "center",
-                    "type_preset": "h5"
-                  }
+                    "type_preset": "h5",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 },
                 "d": {
                   "type": "text",
                   "settings": {
                     "text": "<p>Плащате безопасно при получаване. Безплатен преглед с Еконт, Спиди и Pigeon.</p>",
                     "width": "fill",
+                    "max_width": "normal",
                     "alignment": "center",
-                    "type_preset": "rte"
-                  }
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 }
               },
               "block_order": [
@@ -242,8 +690,39 @@
               "type": "group",
               "settings": {
                 "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
                 "horizontal_alignment_flex_direction_column": "center",
-                "gap": 10
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 10,
+                "width": "fill",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "background_media": "none",
+                "background_color": "",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_color": "",
+                "border_radius": 0,
+                "link": "",
+                "open_in_new_tab": false,
+                "placeholder": "",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
               },
               "blocks": {
                 "i": {
@@ -251,26 +730,61 @@
                   "settings": {
                     "icon": "stopwatch",
                     "width": 40,
-                    "icon_color": "#BFA06A"
-                  }
+                    "link": "",
+                    "open_in_new_tab": false,
+                    "icon_color": "#bfa06a"
+                  },
+                  "blocks": {}
                 },
                 "t": {
                   "type": "text",
                   "settings": {
                     "text": "<p><strong>Интензивна трайност (12+ часа)</strong></p>",
                     "width": "fill",
+                    "max_width": "normal",
                     "alignment": "center",
-                    "type_preset": "h5"
-                  }
+                    "type_preset": "h5",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 },
                 "d": {
                   "type": "text",
                   "settings": {
                     "text": "<p>Наситен и дълготраен аромат върху вашата кожа през целия ден.</p>",
                     "width": "fill",
+                    "max_width": "normal",
                     "alignment": "center",
-                    "type_preset": "rte"
-                  }
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 }
               },
               "block_order": [
@@ -294,9 +808,29 @@
       ],
       "settings": {
         "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
         "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
         "gap": 32,
         "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "background_media": "none",
+        "background_color": "",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_color": "",
+        "border_radius": 0,
         "padding-block-start": 56,
         "padding-block-end": 56
       }
@@ -309,9 +843,25 @@
           "settings": {
             "text": "<p>Избери своя стил</p>",
             "width": "fill",
+            "max_width": "normal",
             "alignment": "center",
-            "type_preset": "h2"
-          }
+            "type_preset": "h2",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "text_color": "",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
         },
         "k_row": {
           "type": "group",
@@ -320,18 +870,71 @@
             "vertical_on_mobile": true,
             "horizontal_alignment": "center",
             "vertical_alignment": "stretch",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
             "gap": 16,
-            "width": "fill"
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "background_media": "none",
+            "background_color": "",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_color": "",
+            "border_radius": 0,
+            "link": "",
+            "open_in_new_tab": false,
+            "placeholder": "",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
           },
           "blocks": {
             "k1": {
               "type": "group",
               "settings": {
                 "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
                 "horizontal_alignment_flex_direction_column": "center",
                 "vertical_alignment_flex_direction_column": "center",
                 "gap": 14,
+                "width": "fill",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "background_media": "none",
                 "background_color": "{{ settings.color_palette.color2 }}",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_color": "",
+                "border_radius": 0,
+                "link": "",
+                "open_in_new_tab": false,
+                "placeholder": "",
                 "padding-block-start": 48,
                 "padding-block-end": 48,
                 "padding-inline-start": 24,
@@ -343,31 +946,68 @@
                   "settings": {
                     "text": "<p>Дамски парфюми</p>",
                     "width": "fill",
+                    "max_width": "normal",
                     "alignment": "center",
                     "type_preset": "h3",
-                    "text_color": "{{ settings.color_palette.foreground }}"
-                  }
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "{{ settings.color_palette.foreground }}",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 },
                 "d": {
                   "type": "text",
                   "settings": {
                     "text": "<p>Изисканост, елегантност и женственост</p>",
                     "width": "fill",
+                    "max_width": "normal",
                     "alignment": "center",
                     "type_preset": "rte",
-                    "text_color": "{{ settings.color_palette.foreground }}"
-                  }
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "{{ settings.color_palette.foreground }}",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 },
                 "b": {
                   "type": "button",
                   "settings": {
                     "label": "Пазарувай Жена",
                     "link": "shopify://collections/дамски-парфюми",
+                    "open_in_new_tab": false,
                     "style_class": "button-custom",
                     "custom_button_background": "{{ settings.color_palette.color1 }}",
                     "custom_button_text": "{{ settings.color_palette.background }}",
-                    "custom_button_border": "{{ settings.color_palette.color1 }}"
-                  }
+                    "custom_button_border": "{{ settings.color_palette.color1 }}",
+                    "link_text_color": "",
+                    "width": "fit-content",
+                    "custom_width": 100,
+                    "width_mobile": "fit-content",
+                    "custom_width_mobile": 100
+                  },
+                  "blocks": {}
                 }
               },
               "block_order": [
@@ -380,10 +1020,35 @@
               "type": "group",
               "settings": {
                 "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
                 "horizontal_alignment_flex_direction_column": "center",
                 "vertical_alignment_flex_direction_column": "center",
                 "gap": 14,
-                "background_color": "#F3EEE4",
+                "width": "fill",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "background_media": "none",
+                "background_color": "#f3eee4",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_color": "",
+                "border_radius": 0,
+                "link": "",
+                "open_in_new_tab": false,
+                "placeholder": "",
                 "padding-block-start": 48,
                 "padding-block-end": 48,
                 "padding-inline-start": 24,
@@ -395,31 +1060,68 @@
                   "settings": {
                     "text": "<p>Мъжки парфюми</p>",
                     "width": "fill",
+                    "max_width": "normal",
                     "alignment": "center",
                     "type_preset": "h3",
-                    "text_color": "{{ settings.color_palette.foreground }}"
-                  }
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "{{ settings.color_palette.foreground }}",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 },
                 "d": {
                   "type": "text",
                   "settings": {
                     "text": "<p>Сила, стил и харизма</p>",
                     "width": "fill",
+                    "max_width": "normal",
                     "alignment": "center",
                     "type_preset": "rte",
-                    "text_color": "{{ settings.color_palette.foreground }}"
-                  }
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "{{ settings.color_palette.foreground }}",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 },
                 "b": {
                   "type": "button",
                   "settings": {
                     "label": "Пазарувай Мъж",
                     "link": "shopify://collections/мъжки-парфюми",
+                    "open_in_new_tab": false,
                     "style_class": "button-custom",
                     "custom_button_background": "{{ settings.color_palette.color1 }}",
                     "custom_button_text": "{{ settings.color_palette.background }}",
-                    "custom_button_border": "{{ settings.color_palette.color1 }}"
-                  }
+                    "custom_button_border": "{{ settings.color_palette.color1 }}",
+                    "link_text_color": "",
+                    "width": "fit-content",
+                    "custom_width": 100,
+                    "width_mobile": "fit-content",
+                    "custom_width_mobile": 100
+                  },
+                  "blocks": {}
                 }
               },
               "block_order": [
@@ -432,10 +1134,35 @@
               "type": "group",
               "settings": {
                 "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
                 "horizontal_alignment_flex_direction_column": "center",
                 "vertical_alignment_flex_direction_column": "center",
                 "gap": 14,
+                "width": "fill",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "background_media": "none",
                 "background_color": "{{ settings.color_palette.color2 }}",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_color": "",
+                "border_radius": 0,
+                "link": "",
+                "open_in_new_tab": false,
+                "placeholder": "",
                 "padding-block-start": 48,
                 "padding-block-end": 48,
                 "padding-inline-start": 24,
@@ -447,31 +1174,68 @@
                   "settings": {
                     "text": "<p>Unisex & Luxury Collection</p>",
                     "width": "fill",
+                    "max_width": "normal",
                     "alignment": "center",
                     "type_preset": "h3",
-                    "text_color": "{{ settings.color_palette.foreground }}"
-                  }
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "{{ settings.color_palette.foreground }}",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 },
                 "d": {
                   "type": "text",
                   "settings": {
                     "text": "<p>Ексклузивни нишови аромати</p>",
                     "width": "fill",
+                    "max_width": "normal",
                     "alignment": "center",
                     "type_preset": "rte",
-                    "text_color": "{{ settings.color_palette.foreground }}"
-                  }
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "{{ settings.color_palette.foreground }}",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 },
                 "b": {
                   "type": "button",
                   "settings": {
                     "label": "Открий Luxury",
                     "link": "shopify://collections/унисекс-и-лукс",
+                    "open_in_new_tab": false,
                     "style_class": "button-custom",
                     "custom_button_background": "{{ settings.color_palette.color1 }}",
                     "custom_button_text": "{{ settings.color_palette.background }}",
-                    "custom_button_border": "{{ settings.color_palette.color1 }}"
-                  }
+                    "custom_button_border": "{{ settings.color_palette.color1 }}",
+                    "link_text_color": "",
+                    "width": "fit-content",
+                    "custom_width": 100,
+                    "width_mobile": "fit-content",
+                    "custom_width_mobile": 100
+                  },
+                  "blocks": {}
                 }
               },
               "block_order": [
@@ -494,9 +1258,29 @@
       ],
       "settings": {
         "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
         "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
         "gap": 28,
         "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "background_media": "none",
+        "background_color": "",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_color": "",
+        "border_radius": 0,
         "padding-block-start": 40,
         "padding-block-end": 56
       }
@@ -509,9 +1293,32 @@
           "static": true,
           "settings": {
             "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
             "horizontal_alignment_flex_direction_column": "center",
+            "vertical_alignment_flex_direction_column": "center",
             "gap": 8,
-            "width": "fill"
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "background_media": "none",
+            "background_color": "",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_color": "",
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
           },
           "blocks": {
             "ttl": {
@@ -519,25 +1326,67 @@
               "settings": {
                 "text": "<h3>Нашите Бестселъри</h3>",
                 "width": "fill",
+                "max_width": "normal",
                 "alignment": "center",
-                "type_preset": "h2"
-              }
+                "type_preset": "h2",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "text_color": "",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
             },
             "sub": {
               "type": "_product-list-text",
               "settings": {
                 "text": "<p>Най-предпочитаните иконични аромати с италианско качество</p>",
                 "width": "fill",
+                "max_width": "normal",
                 "alignment": "center",
-                "type_preset": "rte"
-              }
+                "type_preset": "rte",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "text_color": "",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
             },
             "btn": {
               "type": "_product-list-button",
               "settings": {
                 "label": "Виж всички",
-                "style_class": "link"
-              }
+                "open_in_new_tab": false,
+                "style_class": "link",
+                "custom_button_background": "{{ settings.color_palette.foreground }}",
+                "custom_button_text": "{{ settings.color_palette.background }}",
+                "custom_button_border": "{{ settings.color_palette.background }}",
+                "link_text_color": "",
+                "width": "fit-content",
+                "custom_width": 100,
+                "width_mobile": "fit-content",
+                "custom_width_mobile": 100
+              },
+              "blocks": {}
             }
           },
           "block_order": [
@@ -550,28 +1399,80 @@
           "type": "_product-card",
           "static": true,
           "settings": {
-            "product_card_gap": 4
+            "product_card_gap": 4,
+            "background_color": "",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_color": "",
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
           },
           "blocks": {
             "gal": {
               "type": "_product-card-gallery",
               "settings": {
-                "image_ratio": "adapt"
-              }
+                "image_ratio": "adapt",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_color": "",
+                "border_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
             },
             "ptitle": {
               "type": "product-title",
               "settings": {
+                "width": "fit-content",
+                "max_width": "normal",
                 "alignment": "left",
-                "type_preset": "h4"
-              }
+                "type_preset": "h4",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "text_color": "",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
             },
             "price": {
               "type": "price",
               "settings": {
+                "show_sale_price_first": true,
+                "show_installments": false,
+                "show_tax_info": false,
                 "type_preset": "h6",
-                "alignment": "left"
-              }
+                "width": "100%",
+                "alignment": "left",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "text_color": "",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
             }
           },
           "block_order": [
@@ -584,11 +1485,15 @@
       "settings": {
         "collection": "бестселъри",
         "layout_type": "grid",
+        "carousel_on_mobile": false,
         "max_products": 8,
         "columns": 4,
         "mobile_columns": "2",
+        "mobile_card_size": "60cqw",
         "columns_gap": 8,
         "rows_gap": 24,
+        "icons_style": "arrow",
+        "icons_shape": "none",
         "section_width": "page-width",
         "horizontal_alignment": "center",
         "gap": 28,
@@ -605,21 +1510,50 @@
           "settings": {
             "text": "<p>Италианско майсторство среща френския лукс</p>",
             "width": "fill",
+            "max_width": "normal",
             "alignment": "center",
             "type_preset": "h2",
-            "text_color": "{{ settings.color_palette.background }}"
-          }
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "text_color": "{{ settings.color_palette.background }}",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
         },
         "s_text": {
           "type": "text",
           "settings": {
-            "text": "<p>В BeautyBag вярваме, че луксозният парфюм не трябва да бъде недостижим. Нашите парфюми са създадени в Италия от Chogan Group S.p.A., използващи натурални френски есенции от световната столица на парфюмерията – Грас.</p><p>Благодарение на високата концентрация от 30% Extrait de Parfum, вие получавате интензивен, дълготраен и завладяващ аромат.</p>",
+            "text": "<p>В BeautyBag вярваме, че луксозният парфюм не трябва да бъде недостижим. Нашите парфюми са създадени в Италия от Chogan Group S.p.A., използващи натурални френски есенции от световната столица на парфюмерията – Грас.</p><p>Благодарение на високата концентрация от 30% Extrait de Parfum, вие получавате интензивен, дълготраен и завладяващ аромат на достъпна цена.</p>",
             "width": "fill",
             "max_width": "narrow",
             "alignment": "center",
             "type_preset": "rte",
-            "text_color": "{{ settings.color_palette.background }}"
-          }
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "text_color": "{{ settings.color_palette.background }}",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
         }
       },
       "block_order": [
@@ -628,10 +1562,29 @@
       ],
       "settings": {
         "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
         "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
         "gap": 20,
         "section_width": "full-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "background_media": "none",
         "background_color": "{{ settings.color_palette.color1 }}",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_color": "",
+        "border_radius": 0,
         "padding-block-start": 72,
         "padding-block-end": 72
       }
@@ -644,29 +1597,79 @@
           "settings": {
             "text": "<p>Често задавани въпроси</p>",
             "width": "fill",
+            "max_width": "normal",
             "alignment": "center",
-            "type_preset": "h2"
-          }
+            "type_preset": "h2",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "text_color": "",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
         },
         "f_acc": {
           "type": "accordion",
           "settings": {
             "icon": "caret",
             "dividers": true,
-            "type_preset": "h6"
+            "divider_color": "",
+            "type_preset": "h6",
+            "background_color": "",
+            "text_color": "",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_color": "",
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
           },
           "blocks": {
             "q1": {
               "type": "_accordion-row",
               "settings": {
-                "heading": "Каква е разликата между Eau de Parfum и Extrait de Parfum?"
+                "heading": "Каква е разликата между Eau de Parfum и Extrait de Parfum?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
               },
               "blocks": {
                 "a": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Масовите парфюми съдържат между 10% и 15% есенция (Eau de Parfum). Нашите парфюми са Extrait de Parfum с цели 30% чиста есенция, което гарантира изключителна дълготрайност и интензивност.</p>"
-                  }
+                    "text": "<p>Масовите парфюми съдържат между 10% и 15% есенция (Eau de Parfum). Нашите парфюми са Extrait de Parfum с цели 30% чиста есенция, което гарантира изключителна дълготрайност и интензивност.</p>",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 }
               },
               "block_order": [
@@ -676,14 +1679,36 @@
             "q2": {
               "type": "_accordion-row",
               "settings": {
-                "heading": "Как мога да платя поръчката си?"
+                "heading": "Как мога да платя поръчката си?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
               },
               "blocks": {
                 "a": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Плащането се извършва с Наложен платеж (в брой или с карта) на куриера при получаване на пратката.</p>"
-                  }
+                    "text": "<p>Плащането се извършва с Наложен платеж (в брой или с карта) на куриера при получаване на пратката.</p>",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 }
               },
               "block_order": [
@@ -693,14 +1718,36 @@
             "q3": {
               "type": "_accordion-row",
               "settings": {
-                "heading": "Какви са опциите за доставка?"
+                "heading": "Какви са опциите за доставка?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
               },
               "blocks": {
                 "a": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Доставяме за 24/48 часа до личен адрес или офис/автомат с Еконт, Спиди и Pigeon (вкл. Pigeon до адрес и 24/7 автомати). Всички пратки са с опция \"Преглед преди плащане\".</p>"
-                  }
+                    "text": "<p>Доставяме за 24/48 часа до личен адрес или офис/автомат с Еконт, Спиди и Pigeon (вкл. Pigeon до адрес и 24/7 автомати). Всички пратки са с опция \"Преглед преди плащане\".</p>",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 }
               },
               "block_order": [
@@ -721,88 +1768,29 @@
       ],
       "settings": {
         "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
         "horizontal_alignment_flex_direction_column": "stretch",
+        "vertical_alignment_flex_direction_column": "center",
         "gap": 24,
         "section_width": "page-width",
-        "padding-block-start": 56,
-        "padding-block-end": 56
-      }
-    },
-    "intro_bb": {
-      "type": "section",
-      "blocks": {
-        "h1": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Луксозни италиански парфюми с 30% чиста френска есенция</p>",
-            "width": "fill",
-            "alignment": "center",
-            "type_preset": "h1",
-            "text_color": "{{ settings.color_palette.foreground }}"
-          }
-        },
-        "sub": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Открийте магията на висшата парфюмерия с Extrait de Parfum. 100% Произведено в Италия, с дълготрайност над 12 часа.</p>",
-            "width": "fill",
-            "alignment": "center",
-            "type_preset": "rte",
-            "text_color": "{{ settings.color_palette.foreground }}"
-          }
-        },
-        "btns": {
-          "type": "group",
-          "settings": {
-            "content_direction": "row",
-            "vertical_on_mobile": true,
-            "horizontal_alignment": "center",
-            "vertical_alignment": "center",
-            "horizontal_alignment_flex_direction_column": "center",
-            "gap": 16
-          },
-          "blocks": {
-            "b1": {
-              "type": "button",
-              "settings": {
-                "label": "Разгледай колекцията",
-                "link": "shopify://collections/all",
-                "style_class": "button-custom",
-                "custom_button_background": "{{ settings.color_palette.color1 }}",
-                "custom_button_text": "{{ settings.color_palette.background }}",
-                "custom_button_border": "{{ settings.color_palette.color1 }}"
-              }
-            },
-            "b2": {
-              "type": "button",
-              "settings": {
-                "label": "Открий своя аромат",
-                "link": "/search",
-                "style_class": "button-custom",
-                "custom_button_background": "rgba(0,0,0,0)",
-                "custom_button_text": "{{ settings.color_palette.foreground }}",
-                "custom_button_border": "{{ settings.color_palette.foreground }}"
-              }
-            }
-          },
-          "block_order": [
-            "b1",
-            "b2"
-          ]
-        }
-      },
-      "block_order": [
-        "h1",
-        "sub",
-        "btns"
-      ],
-      "settings": {
-        "content_direction": "column",
-        "horizontal_alignment_flex_direction_column": "center",
-        "vertical_alignment_flex_direction_column": "center",
-        "gap": 20,
-        "section_width": "page-width",
-        "background_color": "{{ settings.color_palette.color2 }}",
+        "section_height": "",
+        "section_height_custom": 50,
+        "background_media": "none",
+        "background_color": "",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_color": "",
+        "border_radius": 0,
         "padding-block-start": 56,
         "padding-block-end": 56
       }

@@ -290,7 +290,7 @@
             "bb_intro": {
               "type": "custom-liquid",
               "settings": {
-                "custom_liquid": "{%- assign bb_conc = product.metafields.custom.concentration.value -%}{%- assign bb_fam = product.metafields.custom.olfactive_family.value -%}{%- assign bb_ml = product.metafields.custom.size_ml.value -%}<div class='bb-desc'>{%- if bb_conc != blank -%}<h3>Открийте интензивността на истинския Extrait de Parfum</h3><p>Всеки аромат съдържа 30% чиста парфюмна есенция от Грас, Франция, и е създаден в Италия от Chogan Group S.p.A. – за наситен, дълготраен и завладяващ аромат.</p><ul style='padding-left:1.2rem'>{%- if bb_fam != blank -%}<li><strong>Олфактивно семейство:</strong> {{ bb_fam }}</li>{%- endif -%}<li><strong>Концентрация:</strong> {{ bb_conc }} ({{ product.metafields.custom.essence_percent.value | default: '30' }}% есенция)</li>{%- if bb_ml != blank -%}<li><strong>Обем:</strong> {{ bb_ml }} мл{% if product.metafields.custom.is_refill.value %} (зареждане){% endif %}</li>{%- endif -%}</ul><p><strong>Предимства:</strong> трайност 12+ часа, органичен денатуриран алкохол, дерматологично тестван.</p>{%- else -%}<h3>Италиански парфюм от Chogan Group S.p.A.</h3><p>Създаден в Италия, дерматологично тестван.{% if bb_ml != blank %} Обем: {{ bb_ml }} мл.{% endif %}</p>{%- endif -%}</div>"
+                "custom_liquid": "{%- assign bb_conc = product.metafields.custom.concentration.value -%}{%- assign bb_fam = product.metafields.custom.olfactive_family.value -%}{%- assign bb_ml = product.metafields.custom.size_ml.value -%}<div class='bb-desc'>{%- if bb_conc != blank -%}<h3>Открийте интензивността на истинския Extrait de Parfum</h3><p>Всеки аромат съдържа 30% чиста парфюмна есенция от Грас, Франция, и е създаден в Италия от Chogan Group S.p.A. – за наситен, дълготраен и завладяващ аромат на достъпна цена.</p><ul style='padding-left:1.2rem'>{%- if bb_fam != blank -%}<li><strong>Олфактивно семейство:</strong> {{ bb_fam }}</li>{%- endif -%}<li><strong>Концентрация:</strong> {{ bb_conc }} ({{ product.metafields.custom.essence_percent.value | default: '30' }}% есенция)</li>{%- if bb_ml != blank -%}<li><strong>Обем:</strong> {{ bb_ml }} мл{% if product.metafields.custom.is_refill.value %} (зареждане){% endif %}</li>{%- endif -%}</ul><p><strong>Предимства:</strong> трайност 12+ часа, органичен денатуриран алкохол, дерматологично тестван.</p>{%- else -%}<h3>Италиански парфюм от Chogan Group S.p.A.</h3><p>Създаден в Италия, дерматологично тестван.{% if bb_ml != blank %} Обем: {{ bb_ml }} мл.{% endif %}</p>{%- endif -%}</div>"
               }
             },
             "text_aEtTtq": {
@@ -362,27 +362,9 @@
                   "block_order": [
                     "t"
                   ]
-                },
-                "a4": {
-                  "type": "_accordion-row",
-                  "settings": {
-                    "heading": "🌿 Олфактивна пирамида"
-                  },
-                  "blocks": {
-                    "t": {
-                      "type": "custom-liquid",
-                      "settings": {
-                        "custom_liquid": "{%- assign bb_top = product.metafields.custom.top_notes.value -%}{%- assign bb_heart = product.metafields.custom.heart_notes.value -%}{%- assign bb_base = product.metafields.custom.base_notes.value -%}{%- if bb_top != blank or bb_heart != blank or bb_base != blank -%}<ul style='padding-left:1.2rem;margin:0'>{%- if bb_top != blank -%}<li><strong>Връхни нотки:</strong> {{ bb_top | join: ', ' }}</li>{%- endif -%}{%- if bb_heart != blank -%}<li><strong>Сърдечни нотки:</strong> {{ bb_heart | join: ', ' }}</li>{%- endif -%}{%- if bb_base != blank -%}<li><strong>Базови нотки:</strong> {{ bb_base | join: ', ' }}</li>{%- endif -%}</ul>{%- endif -%}"
-                      }
-                    }
-                  },
-                  "block_order": [
-                    "t"
-                  ]
                 }
               },
               "block_order": [
-                "a4",
                 "a1",
                 "a2",
                 "a3"
