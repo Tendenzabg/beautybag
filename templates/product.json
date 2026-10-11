@@ -166,7 +166,7 @@
                   "settings": {
                     "type_preset": "",
                     "width": "100%",
-                    "alignment": "left",
+                    "alignment": "right",
                     "font": "var(--font-body--family)",
                     "font_size": "1rem",
                     "line_height": "normal",
