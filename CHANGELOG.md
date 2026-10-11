@@ -1,5 +1,8 @@
 # Changelog
 
+## v1.21 — 2026-10-12
+- Logo mobile ancora più grande: altezza da 38 a 50 px (`logo_height_mobile`).
+
 ## v1.20 — 2026-10-12
 - Salvate le modifiche dall'editor sul tema live (v1.18): nuove immagini mobile dell'hero (senza logo), immagine di sfondo "luxury" nella sezione collezione, fondi lilla semitrasparenti sui testi e pulsante con viola semitrasparente. Mantenuto il logo mobile a 38 px.
 
