@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.6 — 2026-10-11
+- Slideshow hero: nuova impostazione "Immagine mobile" (<750px, formato verticale 4:5) sul blocco slide.
+- Homepage: banner mobile 928x1152 (bianco e nero) collegati alle due slide.
+
 ## v1.5 — 2026-10-11
 - Sfondo del sito bianco (#FFFFFF) con riquadri/linee color #F3EFE8 (variante "Prova A").
 - Scheda prodotto: nuova riga accordion "Олфактивна пирамида" (note di testa/cuore/fondo dai metafield), mostrata solo se presenti.
