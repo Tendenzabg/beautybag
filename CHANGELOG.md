@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.4 — 2026-10-11
+- Scheda prodotto: selettore "Формат" con i due formati collegati (70 ml ↔ 30 ml, 50 ml ↔ 15 ml ricarica) in base al metafield `other_format`; mostra misura e prezzo, il formato corrente è evidenziato in verde salvia.
+- Fix: la dicitura "(зареждане)" nell'intro ora usa correttamente il metafield booleano `is_refill`.
+
 ## v1.3 — 2026-10-11
 - Scheda prodotto: nascosto il pulsante di acquisto rapido "Купете със Shop" (nuova opzione nel blocco accelerated-checkout, ora disattivata).
 
