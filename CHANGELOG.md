@@ -1,5 +1,8 @@
 # Changelog
 
+## v1.14 — 2026-10-11
+- Salvata la modifica fatta nell'editor al testo "Правна забележка" nella scheda prodotto (accordion): ora non cita più marca e modello nella frase iniziale.
+
 ## v1.13 — 2026-10-11
 - Salvate le modifiche fatte nell'editor sul tema live (v1.12): pulsanti hero della home trasparenti con bordo e testo marrone (#6A4A43 / #6B5748), larghezza personalizzata 25% desktop / 50% mobile.
 
