@@ -32,7 +32,7 @@
         "announcement_BxgCk9": {
           "type": "_announcement",
           "settings": {
-            "text": "🚚 Бърза доставка за 24/48ч. с Еконт, Спиди & Pigeon | 📦 Безплатен преглед преди плащане",
+            "text": "🚚 Бърза доставка за 24/48ч. с Еконт, Спиди & Pigeon",
             "link": "",
             "font": "var(--font-subheading--family)",
             "font_size": "0.75rem",
