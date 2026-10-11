@@ -1,5 +1,8 @@
 # Changelog
 
+## v1.19 — 2026-10-12
+- Logo più grande su mobile: altezza da 28 a 38 px (`logo_height_mobile`).
+
 ## v1.18 — 2026-10-12
 - Salvate le modifiche dall'editor sul tema live (v1.17): footer con bollettino in bulgaro e impostazioni complete dei blocchi; home con overlay a gradiente viola/rosa sulle sezioni, immagini di sfondo nelle sezioni collezioni e testi con fondo semitrasparente.
 
