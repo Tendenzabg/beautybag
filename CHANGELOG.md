@@ -1,5 +1,8 @@
 # Changelog
 
+## v1.18 — 2026-10-12
+- Salvate le modifiche dall'editor sul tema live (v1.17): footer con bollettino in bulgaro e impostazioni complete dei blocchi; home con overlay a gradiente viola/rosa sulle sezioni, immagini di sfondo nelle sezioni collezioni e testi con fondo semitrasparente.
+
 ## v1.17 — 2026-10-12
 - Etichetta "Изчерпано" (e tutti i badge) quadrata: `badge_corner_radius` da 100 a 0.
 - Schede tecniche PDF (BGR) collegate via metafield ai 94 prodotti della collezione Бестселъри (dati, non tema).
