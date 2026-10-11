@@ -1,5 +1,8 @@
 # Changelog
 
+## v1.12 — 2026-10-11
+- Pulsanti quadrati senza arrotondamenti: raggio 0 per pulsanti primari, secondari e selettori di variante (anche pillole formato e "Купи сега" nelle card).
+
 ## v1.11 — 2026-10-11
 - Pulsante "Купи сега" nelle card delle collezioni: ora trasparente con bordo (pieno al passaggio del mouse), sia su desktop sia su mobile.
 
