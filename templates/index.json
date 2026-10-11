@@ -44,7 +44,7 @@
                 "link": "shopify://collections/all",
                 "open_in_new_tab": false,
                 "style_class": "button-custom",
-                "custom_button_background": "{{ settings.color_palette.color1 }}",
+                "custom_button_background": "#D0B8AC",
                 "custom_button_text": "{{ settings.color_palette.background }}",
                 "custom_button_border": "{{ settings.color_palette.color1 }}",
                 "link_text_color": "",
@@ -413,7 +413,7 @@
                     "width": 40,
                     "link": "",
                     "open_in_new_tab": false,
-                    "icon_color": "#6A61A7"
+                    "icon_color": "#6a61a7"
                   },
                   "blocks": {}
                 },
@@ -520,7 +520,7 @@
                     "width": 40,
                     "link": "",
                     "open_in_new_tab": false,
-                    "icon_color": "#6A61A7"
+                    "icon_color": "#6a61a7"
                   },
                   "blocks": {}
                 },
@@ -627,7 +627,7 @@
                     "width": 40,
                     "link": "",
                     "open_in_new_tab": false,
-                    "icon_color": "#6A61A7"
+                    "icon_color": "#6a61a7"
                   },
                   "blocks": {}
                 },
@@ -734,7 +734,7 @@
                     "width": 40,
                     "link": "",
                     "open_in_new_tab": false,
-                    "icon_color": "#6A61A7"
+                    "icon_color": "#6a61a7"
                   },
                   "blocks": {}
                 },
