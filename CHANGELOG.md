@@ -1,5 +1,8 @@
 # Changelog
 
+## v1.11 — 2026-10-11
+- Pulsante "Купи сега" nelle card delle collezioni: ora trasparente con bordo (pieno al passaggio del mouse), sia su desktop sia su mobile.
+
 ## v1.10 — 2026-10-11
 - Schede prodotto nelle collezioni: su mobile/touch (senza hover) i formati 30/70 ml e "Купи сега" appaiono sotto il prezzo; su desktop resta il pannello al passaggio del mouse (snippet `product-card-formats`, parametro `layout`).
 
