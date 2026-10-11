@@ -14,6 +14,21 @@
     "header_announcements_9jGBFp": {
       "type": "header-announcements",
       "blocks": {
+        "announcement_FhP7CR": {
+          "type": "_announcement",
+          "name": "t:names.announcement",
+          "settings": {
+            "text": "🧪 Extrait de Parfum (30% френска есенция от Грас)",
+            "link": "",
+            "font": "var(--font-subheading--family)",
+            "font_size": "0.75rem",
+            "weight": "",
+            "letter_spacing": "normal",
+            "case": "none",
+            "text_color": ""
+          },
+          "blocks": {}
+        },
         "announcement_BxgCk9": {
           "type": "_announcement",
           "settings": {
@@ -44,6 +59,7 @@
         }
       },
       "block_order": [
+        "announcement_FhP7CR",
         "announcement_BxgCk9",
         "announcement_Itl002"
       ],
