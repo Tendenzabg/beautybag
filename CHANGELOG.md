@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.17 — 2026-10-12
+- Etichetta "Изчерпано" (e tutti i badge) quadrata: `badge_corner_radius` da 100 a 0.
+- Schede tecniche PDF (BGR) collegate via metafield ai 94 prodotti della collezione Бестселъри (dati, non tema).
+
 ## v1.16 — 2026-10-11
 - Scheda prodotto: nuovo blocco sotto gli accordion con il pulsante "Изтегли техническата карта (PDF)", mostrato solo se il prodotto ha il metafield `custom.tech_sheet` (file). Primo prodotto con scheda: 002M.
 

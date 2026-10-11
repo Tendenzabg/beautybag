@@ -49,7 +49,7 @@
     "transition_to_main_product": true,
     "card_hover_effect": "none",
     "badge_position": "top-right",
-    "badge_corner_radius": 100,
+    "badge_corner_radius": 0,
     "badge_sale_background_color": "{{ settings.color_palette.background }}",
     "badge_sale_text_color": "{{ settings.color_palette.foreground }}",
     "badge_sold_out_background_color": "#F6C6E2",
