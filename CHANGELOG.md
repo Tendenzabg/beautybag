@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.7 — 2026-10-11
+- Nuova palette ispirata a chogangroupspa.com: sfondo #FFFFFF, testo #1D1D1D, viola #6A61A7 (pulsanti/accenti), lilla chiaro #EDEBF5 (riquadri/linee). Badge "esaurito" rosa #F6C6E2.
+- Font: Instrument Sans per titoli, sottotitoli e testo (prima Prata + Inter). Dimensioni titoli leggermente ridotte.
+- Stile: pulsanti, campi e selettori a pillola; schede prodotto e popup con angoli 16 px; larghezza pagina "wide".
+- Icone dei blocchi "Icona" (homepage e scheda prodotto): viola con cerchio lilla dietro, seguono la palette (regola in snippets/icon-or-image.liquid).
+
 ## v1.6 — 2026-10-11
 - Slideshow hero: nuova impostazione "Immagine mobile" (<750px, formato verticale 4:5) sul blocco slide.
 - Homepage: banner mobile 928x1152 (bianco e nero) collegati alle due slide.

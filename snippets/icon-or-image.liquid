@@ -9,6 +9,17 @@
 {%- enddoc -%}
 
 {%- if icon != 'none' and image_upload == blank -%}
+  {%- if class_name contains 'icon-block__media' -%}
+    {% style %}
+      svg.icon-block__media.icon-default {
+        color: {{ settings.color_palette.color1 }};
+        background-color: {{ settings.color_palette.color2 }};
+        border-radius: 50%;
+        padding: 10px;
+        box-sizing: content-box;
+      }
+    {% endstyle %}
+  {%- endif -%}
   <svg
     class="{{ class_name | append: ' icon-default' | strip }}"
     aria-hidden="true"

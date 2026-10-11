@@ -173,7 +173,7 @@
                       "settings": {
                         "icon": "star",
                         "width": 22,
-                        "icon_color": "#BFA06A"
+                        "icon_color": "#6A61A7"
                       }
                     },
                     "t": {
@@ -203,7 +203,7 @@
                       "settings": {
                         "icon": "perfume",
                         "width": 22,
-                        "icon_color": "#BFA06A"
+                        "icon_color": "#6A61A7"
                       }
                     },
                     "t": {
@@ -233,7 +233,7 @@
                       "settings": {
                         "icon": "truck",
                         "width": 22,
-                        "icon_color": "#BFA06A"
+                        "icon_color": "#6A61A7"
                       }
                     },
                     "t": {
@@ -263,7 +263,7 @@
                       "settings": {
                         "icon": "box",
                         "width": 22,
-                        "icon_color": "#BFA06A"
+                        "icon_color": "#6A61A7"
                       }
                     },
                     "t": {
