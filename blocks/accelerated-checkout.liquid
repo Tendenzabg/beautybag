@@ -24,7 +24,7 @@
   {% endif %}
 {% endcapture %}
 
-{% if accelerated_checkout_button != blank %}
+{% if accelerated_checkout_button != blank and block.settings.show_button %}
   <div
     class="accelerated-checkout-block"
     ref="acceleratedCheckoutButtonContainer"
@@ -45,6 +45,14 @@
 {% schema %}
 {
   "name": "t:names.accelerated_checkout",
-  "tag": null
+  "tag": null,
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_button",
+      "label": "Mostra pulsante acquisto rapido (Shop Pay / Купете със Shop)",
+      "default": true
+    }
+  ]
 }
 {% endschema %}

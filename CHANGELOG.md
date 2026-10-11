@@ -1,5 +1,8 @@
 # Changelog
 
+## v1.3 — 2026-10-11
+- Scheda prodotto: nascosto il pulsante di acquisto rapido "Купете със Shop" (nuova opzione nel blocco accelerated-checkout, ora disattivata).
+
 ## v1.2 — 2026-10-11
 - Scheda prodotto: rimosso il sottotitolo "Олфактивно вдъхновение: marca - modello" sotto il prezzo (il disclaimer legale nell'accordion resta).
 
