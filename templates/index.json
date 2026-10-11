@@ -1,1 +1,820 @@
-{"sections":{"hero_bb":{"type":"slideshow","blocks":{"slide_nero":{"type":"_slide","settings":{"media_type_1":"image","image_1":"shopify://shop_images/beautybag-hero-nero.jpg","content_direction":"column","horizontal_alignment_flex_direction_column":"flex-start","vertical_alignment_flex_direction_column":"flex-end","gap":12,"padding-inline-start":48,"padding-inline-end":48,"padding-block-start":32,"padding-block-end":40},"blocks":{"btn":{"type":"button","settings":{"label":"Разгледай колекцията","link":"shopify://collections/all","style_class":"button-custom","custom_button_background":"{{ settings.color_palette.color1 }}","custom_button_text":"{{ settings.color_palette.background }}","custom_button_border":"{{ settings.color_palette.color1 }}"}}},"block_order":["btn"]},"slide_bianco":{"type":"_slide","settings":{"media_type_1":"image","image_1":"shopify://shop_images/beautybag-hero-bianco.jpg","content_direction":"column","horizontal_alignment_flex_direction_column":"flex-start","vertical_alignment_flex_direction_column":"flex-end","gap":12,"padding-inline-start":48,"padding-inline-end":48,"padding-block-start":32,"padding-block-end":40},"blocks":{"btn":{"type":"button","settings":{"label":"Открий своя аромат","link":"shopify://collections/all","style_class":"button-custom","custom_button_background":"{{ settings.color_palette.color1 }}","custom_button_text":"{{ settings.color_palette.background }}","custom_button_border":"{{ settings.color_palette.color1 }}"}}},"block_order":["btn"]}},"block_order":["slide_nero","slide_bianco"],"settings":{"display_mode":"full_frame","section_width":"full-width","slide_height":"large","content_position":"on-media","slideshow_controls_style":"dots","autoplay":true,"autoplay_speed":6,"background_color":"{{ settings.color_palette.background }}","padding-block-start":0,"padding-block-end":0}},"trust_bb":{"type":"section","blocks":{"t_head":{"type":"text","settings":{"text":"<p>Защо да изберете нас</p>","width":"fill","alignment":"center","type_preset":"h2"}},"t_row":{"type":"group","settings":{"content_direction":"row","vertical_on_mobile":true,"horizontal_alignment":"center","vertical_alignment":"flex-start","gap":32,"width":"fill"},"blocks":{"c1":{"type":"group","settings":{"content_direction":"column","horizontal_alignment_flex_direction_column":"center","gap":10},"blocks":{"i":{"type":"icon","settings":{"icon":"star","width":40,"icon_color":"#BFA06A"}},"t":{"type":"text","settings":{"text":"<p><strong>100% Made in Italy</strong></p>","width":"fill","alignment":"center","type_preset":"h5"}},"d":{"type":"text","settings":{"text":"<p>Произведено, бутилирано и сертифицирано в Италия съгласно европейските стандарти.</p>","width":"fill","alignment":"center","type_preset":"rte"}}},"block_order":["i","t","d"]},"c2":{"type":"group","settings":{"content_direction":"column","horizontal_alignment_flex_direction_column":"center","gap":10},"blocks":{"i":{"type":"icon","settings":{"icon":"perfume","width":40,"icon_color":"#BFA06A"}},"t":{"type":"text","settings":{"text":"<p><strong>30% Френска Есенция</strong></p>","width":"fill","alignment":"center","type_preset":"h5"}},"d":{"type":"text","settings":{"text":"<p>Extrait de Parfum с най-висока концентрация на чисти есенции от Грас, Франция.</p>","width":"fill","alignment":"center","type_preset":"rte"}}},"block_order":["i","t","d"]},"c3":{"type":"group","settings":{"content_direction":"column","horizontal_alignment_flex_direction_column":"center","gap":10},"blocks":{"i":{"type":"icon","settings":{"icon":"truck","width":40,"icon_color":"#BFA06A"}},"t":{"type":"text","settings":{"text":"<p><strong>Преглед & Наложен платеж</strong></p>","width":"fill","alignment":"center","type_preset":"h5"}},"d":{"type":"text","settings":{"text":"<p>Плащате безопасно при получаване. Безплатен преглед с Еконт, Спиди и Pigeon.</p>","width":"fill","alignment":"center","type_preset":"rte"}}},"block_order":["i","t","d"]},"c4":{"type":"group","settings":{"content_direction":"column","horizontal_alignment_flex_direction_column":"center","gap":10},"blocks":{"i":{"type":"icon","settings":{"icon":"stopwatch","width":40,"icon_color":"#BFA06A"}},"t":{"type":"text","settings":{"text":"<p><strong>Интензивна трайност (12+ часа)</strong></p>","width":"fill","alignment":"center","type_preset":"h5"}},"d":{"type":"text","settings":{"text":"<p>Наситен и дълготраен аромат върху вашата кожа през целия ден.</p>","width":"fill","alignment":"center","type_preset":"rte"}}},"block_order":["i","t","d"]}},"block_order":["c1","c2","c3","c4"]}},"block_order":["t_head","t_row"],"settings":{"content_direction":"column","horizontal_alignment_flex_direction_column":"center","gap":32,"section_width":"page-width","padding-block-start":56,"padding-block-end":56}},"collections_bb":{"type":"section","blocks":{"k_head":{"type":"text","settings":{"text":"<p>Избери своя стил</p>","width":"fill","alignment":"center","type_preset":"h2"}},"k_row":{"type":"group","settings":{"content_direction":"row","vertical_on_mobile":true,"horizontal_alignment":"center","vertical_alignment":"stretch","gap":16,"width":"fill"},"blocks":{"k1":{"type":"group","settings":{"content_direction":"column","horizontal_alignment_flex_direction_column":"center","vertical_alignment_flex_direction_column":"center","gap":14,"background_color":"{{ settings.color_palette.color2 }}","padding-block-start":48,"padding-block-end":48,"padding-inline-start":24,"padding-inline-end":24},"blocks":{"t":{"type":"text","settings":{"text":"<p>Дамски парфюми</p>","width":"fill","alignment":"center","type_preset":"h3","text_color":"{{ settings.color_palette.foreground }}"}},"d":{"type":"text","settings":{"text":"<p>Изисканост, елегантност и женственост</p>","width":"fill","alignment":"center","type_preset":"rte","text_color":"{{ settings.color_palette.foreground }}"}},"b":{"type":"button","settings":{"label":"Пазарувай Жена","link":"shopify://collections/дамски-парфюми","style_class":"button-custom","custom_button_background":"{{ settings.color_palette.color1 }}","custom_button_text":"{{ settings.color_palette.background }}","custom_button_border":"{{ settings.color_palette.color1 }}"}}},"block_order":["t","d","b"]},"k2":{"type":"group","settings":{"content_direction":"column","horizontal_alignment_flex_direction_column":"center","vertical_alignment_flex_direction_column":"center","gap":14,"background_color":"#F3EEE4","padding-block-start":48,"padding-block-end":48,"padding-inline-start":24,"padding-inline-end":24},"blocks":{"t":{"type":"text","settings":{"text":"<p>Мъжки парфюми</p>","width":"fill","alignment":"center","type_preset":"h3","text_color":"{{ settings.color_palette.foreground }}"}},"d":{"type":"text","settings":{"text":"<p>Сила, стил и харизма</p>","width":"fill","alignment":"center","type_preset":"rte","text_color":"{{ settings.color_palette.foreground }}"}},"b":{"type":"button","settings":{"label":"Пазарувай Мъж","link":"shopify://collections/мъжки-парфюми","style_class":"button-custom","custom_button_background":"{{ settings.color_palette.color1 }}","custom_button_text":"{{ settings.color_palette.background }}","custom_button_border":"{{ settings.color_palette.color1 }}"}}},"block_order":["t","d","b"]},"k3":{"type":"group","settings":{"content_direction":"column","horizontal_alignment_flex_direction_column":"center","vertical_alignment_flex_direction_column":"center","gap":14,"background_color":"{{ settings.color_palette.color2 }}","padding-block-start":48,"padding-block-end":48,"padding-inline-start":24,"padding-inline-end":24},"blocks":{"t":{"type":"text","settings":{"text":"<p>Unisex & Luxury Collection</p>","width":"fill","alignment":"center","type_preset":"h3","text_color":"{{ settings.color_palette.foreground }}"}},"d":{"type":"text","settings":{"text":"<p>Ексклузивни нишови аромати</p>","width":"fill","alignment":"center","type_preset":"rte","text_color":"{{ settings.color_palette.foreground }}"}},"b":{"type":"button","settings":{"label":"Открий Luxury","link":"shopify://collections/унисекс-и-лукс","style_class":"button-custom","custom_button_background":"{{ settings.color_palette.color1 }}","custom_button_text":"{{ settings.color_palette.background }}","custom_button_border":"{{ settings.color_palette.color1 }}"}}},"block_order":["t","d","b"]}},"block_order":["k1","k2","k3"]}},"block_order":["k_head","k_row"],"settings":{"content_direction":"column","horizontal_alignment_flex_direction_column":"center","gap":28,"section_width":"page-width","padding-block-start":40,"padding-block-end":56}},"best_bb":{"type":"product-list","blocks":{"static-header":{"type":"_product-list-content","static":true,"settings":{"content_direction":"column","horizontal_alignment_flex_direction_column":"center","gap":8,"width":"fill"},"blocks":{"ttl":{"type":"_product-list-text","settings":{"text":"<h3>Нашите Бестселъри</h3>","width":"fill","alignment":"center","type_preset":"h2"}},"sub":{"type":"_product-list-text","settings":{"text":"<p>Най-предпочитаните иконични аромати с италианско качество</p>","width":"fill","alignment":"center","type_preset":"rte"}},"btn":{"type":"_product-list-button","settings":{"label":"Виж всички","style_class":"link"}}},"block_order":["ttl","sub","btn"]},"static-product-card":{"type":"_product-card","static":true,"settings":{"product_card_gap":4},"blocks":{"gal":{"type":"_product-card-gallery","settings":{"image_ratio":"adapt"}},"ptitle":{"type":"product-title","settings":{"alignment":"left","type_preset":"h4"}},"price":{"type":"price","settings":{"type_preset":"h6","alignment":"left"}}},"block_order":["gal","ptitle","price"]}},"settings":{"collection":"бестселъри","layout_type":"grid","max_products":8,"columns":4,"mobile_columns":"2","columns_gap":8,"rows_gap":24,"section_width":"page-width","horizontal_alignment":"center","gap":28,"background_color":"{{ settings.color_palette.background }}","padding-block-start":48,"padding-block-end":48}},"story_bb":{"type":"section","blocks":{"s_head":{"type":"text","settings":{"text":"<p>Италианско майсторство среща френския лукс</p>","width":"fill","alignment":"center","type_preset":"h2","text_color":"{{ settings.color_palette.background }}"}},"s_text":{"type":"text","settings":{"text":"<p>В BeautyBag вярваме, че луксозният парфюм не трябва да бъде недостижим. Нашите парфюми са създадени в Италия от Chogan Group S.p.A., използващи натурални френски есенции от световната столица на парфюмерията – Грас.</p><p>Благодарение на високата концентрация от 30% Extrait de Parfum, вие получавате интензивен, дълготраен и завладяващ аромат на достъпна цена.</p>","width":"fill","max_width":"narrow","alignment":"center","type_preset":"rte","text_color":"{{ settings.color_palette.background }}"}}},"block_order":["s_head","s_text"],"settings":{"content_direction":"column","horizontal_alignment_flex_direction_column":"center","gap":20,"section_width":"full-width","background_color":"{{ settings.color_palette.color1 }}","padding-block-start":72,"padding-block-end":72}},"faq_bb":{"type":"section","blocks":{"f_head":{"type":"text","settings":{"text":"<p>Често задавани въпроси</p>","width":"fill","alignment":"center","type_preset":"h2"}},"f_acc":{"type":"accordion","settings":{"icon":"caret","dividers":true,"type_preset":"h6"},"blocks":{"q1":{"type":"_accordion-row","settings":{"heading":"Каква е разликата между Eau de Parfum и Extrait de Parfum?"},"blocks":{"a":{"type":"text","settings":{"text":"<p>Масовите парфюми съдържат между 10% и 15% есенция (Eau de Parfum). Нашите парфюми са Extrait de Parfum с цели 30% чиста есенция, което гарантира изключителна дълготрайност и интензивност.</p>"}}},"block_order":["a"]},"q2":{"type":"_accordion-row","settings":{"heading":"Как мога да платя поръчката си?"},"blocks":{"a":{"type":"text","settings":{"text":"<p>Плащането се извършва с Наложен платеж (в брой или с карта) на куриера при получаване на пратката.</p>"}}},"block_order":["a"]},"q3":{"type":"_accordion-row","settings":{"heading":"Какви са опциите за доставка?"},"blocks":{"a":{"type":"text","settings":{"text":"<p>Доставяме за 24/48 часа до личен адрес или офис/автомат с Еконт, Спиди и Pigeon (вкл. Pigeon до адрес и 24/7 автомати). Всички пратки са с опция \"Преглед преди плащане\".</p>"}}},"block_order":["a"]}},"block_order":["q1","q2","q3"]}},"block_order":["f_head","f_acc"],"settings":{"content_direction":"column","horizontal_alignment_flex_direction_column":"stretch","gap":24,"section_width":"page-width","padding-block-start":56,"padding-block-end":56}},"intro_bb":{"type":"section","blocks":{"h1":{"type":"text","settings":{"text":"<p>Луксозни италиански парфюми с 30% чиста френска есенция</p>","width":"fill","alignment":"center","type_preset":"h1","text_color":"{{ settings.color_palette.foreground }}"}},"sub":{"type":"text","settings":{"text":"<p>Открийте магията на висшата парфюмерия с Extrait de Parfum. 100% Произведено в Италия, с дълготрайност над 12 часа.</p>","width":"fill","alignment":"center","type_preset":"rte","text_color":"{{ settings.color_palette.foreground }}"}},"btns":{"type":"group","settings":{"content_direction":"row","vertical_on_mobile":true,"horizontal_alignment":"center","vertical_alignment":"center","horizontal_alignment_flex_direction_column":"center","gap":16},"blocks":{"b1":{"type":"button","settings":{"label":"Разгледай колекцията","link":"shopify://collections/all","style_class":"button-custom","custom_button_background":"{{ settings.color_palette.color1 }}","custom_button_text":"{{ settings.color_palette.background }}","custom_button_border":"{{ settings.color_palette.color1 }}"}},"b2":{"type":"button","settings":{"label":"Открий своя аромат","link":"/search","style_class":"button-custom","custom_button_background":"rgba(0,0,0,0)","custom_button_text":"{{ settings.color_palette.foreground }}","custom_button_border":"{{ settings.color_palette.foreground }}"}}},"block_order":["b1","b2"]}},"block_order":["h1","sub","btns"],"settings":{"content_direction":"column","horizontal_alignment_flex_direction_column":"center","vertical_alignment_flex_direction_column":"center","gap":20,"section_width":"page-width","background_color":"{{ settings.color_palette.color2 }}","padding-block-start":56,"padding-block-end":56}}},"order":["hero_bb","intro_bb","trust_bb","collections_bb","best_bb","story_bb","faq_bb"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "hero_bb": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_nero": {
+          "type": "_slide",
+          "settings": {
+            "media_type_1": "image",
+            "image_1": "shopify://shop_images/beautybag-hero-nero.jpg",
+            "content_direction": "column",
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "flex-end",
+            "gap": 12,
+            "padding-inline-start": 48,
+            "padding-inline-end": 48,
+            "padding-block-start": 32,
+            "padding-block-end": 40
+          },
+          "blocks": {
+            "btn": {
+              "type": "button",
+              "settings": {
+                "label": "Разгледай колекцията",
+                "link": "shopify://collections/all",
+                "style_class": "button-custom",
+                "custom_button_background": "{{ settings.color_palette.color1 }}",
+                "custom_button_text": "{{ settings.color_palette.background }}",
+                "custom_button_border": "{{ settings.color_palette.color1 }}"
+              }
+            }
+          },
+          "block_order": [
+            "btn"
+          ]
+        },
+        "slide_bianco": {
+          "type": "_slide",
+          "settings": {
+            "media_type_1": "image",
+            "image_1": "shopify://shop_images/beautybag-hero-bianco.jpg",
+            "content_direction": "column",
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "flex-end",
+            "gap": 12,
+            "padding-inline-start": 48,
+            "padding-inline-end": 48,
+            "padding-block-start": 32,
+            "padding-block-end": 40
+          },
+          "blocks": {
+            "btn": {
+              "type": "button",
+              "settings": {
+                "label": "Открий своя аромат",
+                "link": "shopify://collections/all",
+                "style_class": "button-custom",
+                "custom_button_background": "{{ settings.color_palette.color1 }}",
+                "custom_button_text": "{{ settings.color_palette.background }}",
+                "custom_button_border": "{{ settings.color_palette.color1 }}"
+              }
+            }
+          },
+          "block_order": [
+            "btn"
+          ]
+        }
+      },
+      "block_order": [
+        "slide_nero",
+        "slide_bianco"
+      ],
+      "settings": {
+        "display_mode": "full_frame",
+        "section_width": "full-width",
+        "slide_height": "large",
+        "content_position": "on-media",
+        "slideshow_controls_style": "dots",
+        "autoplay": true,
+        "autoplay_speed": 6,
+        "background_color": "{{ settings.color_palette.background }}",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
+    "trust_bb": {
+      "type": "section",
+      "blocks": {
+        "t_head": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Защо да изберете нас</p>",
+            "width": "fill",
+            "alignment": "center",
+            "type_preset": "h2"
+          }
+        },
+        "t_row": {
+          "type": "group",
+          "settings": {
+            "content_direction": "row",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "center",
+            "vertical_alignment": "flex-start",
+            "gap": 32,
+            "width": "fill"
+          },
+          "blocks": {
+            "c1": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "horizontal_alignment_flex_direction_column": "center",
+                "gap": 10
+              },
+              "blocks": {
+                "i": {
+                  "type": "icon",
+                  "settings": {
+                    "icon": "star",
+                    "width": 40,
+                    "icon_color": "#BFA06A"
+                  }
+                },
+                "t": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><strong>100% Made in Italy</strong></p>",
+                    "width": "fill",
+                    "alignment": "center",
+                    "type_preset": "h5"
+                  }
+                },
+                "d": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Произведено, бутилирано и сертифицирано в Италия съгласно европейските стандарти.</p>",
+                    "width": "fill",
+                    "alignment": "center",
+                    "type_preset": "rte"
+                  }
+                }
+              },
+              "block_order": [
+                "i",
+                "t",
+                "d"
+              ]
+            },
+            "c2": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "horizontal_alignment_flex_direction_column": "center",
+                "gap": 10
+              },
+              "blocks": {
+                "i": {
+                  "type": "icon",
+                  "settings": {
+                    "icon": "perfume",
+                    "width": 40,
+                    "icon_color": "#BFA06A"
+                  }
+                },
+                "t": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><strong>30% Френска Есенция</strong></p>",
+                    "width": "fill",
+                    "alignment": "center",
+                    "type_preset": "h5"
+                  }
+                },
+                "d": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Extrait de Parfum с най-висока концентрация на чисти есенции от Грас, Франция.</p>",
+                    "width": "fill",
+                    "alignment": "center",
+                    "type_preset": "rte"
+                  }
+                }
+              },
+              "block_order": [
+                "i",
+                "t",
+                "d"
+              ]
+            },
+            "c3": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "horizontal_alignment_flex_direction_column": "center",
+                "gap": 10
+              },
+              "blocks": {
+                "i": {
+                  "type": "icon",
+                  "settings": {
+                    "icon": "truck",
+                    "width": 40,
+                    "icon_color": "#BFA06A"
+                  }
+                },
+                "t": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><strong>Преглед & Наложен платеж</strong></p>",
+                    "width": "fill",
+                    "alignment": "center",
+                    "type_preset": "h5"
+                  }
+                },
+                "d": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Плащате безопасно при получаване. Безплатен преглед с Еконт, Спиди и Pigeon.</p>",
+                    "width": "fill",
+                    "alignment": "center",
+                    "type_preset": "rte"
+                  }
+                }
+              },
+              "block_order": [
+                "i",
+                "t",
+                "d"
+              ]
+            },
+            "c4": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "horizontal_alignment_flex_direction_column": "center",
+                "gap": 10
+              },
+              "blocks": {
+                "i": {
+                  "type": "icon",
+                  "settings": {
+                    "icon": "stopwatch",
+                    "width": 40,
+                    "icon_color": "#BFA06A"
+                  }
+                },
+                "t": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><strong>Интензивна трайност (12+ часа)</strong></p>",
+                    "width": "fill",
+                    "alignment": "center",
+                    "type_preset": "h5"
+                  }
+                },
+                "d": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Наситен и дълготраен аромат върху вашата кожа през целия ден.</p>",
+                    "width": "fill",
+                    "alignment": "center",
+                    "type_preset": "rte"
+                  }
+                }
+              },
+              "block_order": [
+                "i",
+                "t",
+                "d"
+              ]
+            }
+          },
+          "block_order": [
+            "c1",
+            "c2",
+            "c3",
+            "c4"
+          ]
+        }
+      },
+      "block_order": [
+        "t_head",
+        "t_row"
+      ],
+      "settings": {
+        "content_direction": "column",
+        "horizontal_alignment_flex_direction_column": "center",
+        "gap": 32,
+        "section_width": "page-width",
+        "padding-block-start": 56,
+        "padding-block-end": 56
+      }
+    },
+    "collections_bb": {
+      "type": "section",
+      "blocks": {
+        "k_head": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Избери своя стил</p>",
+            "width": "fill",
+            "alignment": "center",
+            "type_preset": "h2"
+          }
+        },
+        "k_row": {
+          "type": "group",
+          "settings": {
+            "content_direction": "row",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "center",
+            "vertical_alignment": "stretch",
+            "gap": 16,
+            "width": "fill"
+          },
+          "blocks": {
+            "k1": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "horizontal_alignment_flex_direction_column": "center",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 14,
+                "background_color": "{{ settings.color_palette.color2 }}",
+                "padding-block-start": 48,
+                "padding-block-end": 48,
+                "padding-inline-start": 24,
+                "padding-inline-end": 24
+              },
+              "blocks": {
+                "t": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Дамски парфюми</p>",
+                    "width": "fill",
+                    "alignment": "center",
+                    "type_preset": "h3",
+                    "text_color": "{{ settings.color_palette.foreground }}"
+                  }
+                },
+                "d": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Изисканост, елегантност и женственост</p>",
+                    "width": "fill",
+                    "alignment": "center",
+                    "type_preset": "rte",
+                    "text_color": "{{ settings.color_palette.foreground }}"
+                  }
+                },
+                "b": {
+                  "type": "button",
+                  "settings": {
+                    "label": "Пазарувай Жена",
+                    "link": "shopify://collections/дамски-парфюми",
+                    "style_class": "button-custom",
+                    "custom_button_background": "{{ settings.color_palette.color1 }}",
+                    "custom_button_text": "{{ settings.color_palette.background }}",
+                    "custom_button_border": "{{ settings.color_palette.color1 }}"
+                  }
+                }
+              },
+              "block_order": [
+                "t",
+                "d",
+                "b"
+              ]
+            },
+            "k2": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "horizontal_alignment_flex_direction_column": "center",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 14,
+                "background_color": "#F3EEE4",
+                "padding-block-start": 48,
+                "padding-block-end": 48,
+                "padding-inline-start": 24,
+                "padding-inline-end": 24
+              },
+              "blocks": {
+                "t": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Мъжки парфюми</p>",
+                    "width": "fill",
+                    "alignment": "center",
+                    "type_preset": "h3",
+                    "text_color": "{{ settings.color_palette.foreground }}"
+                  }
+                },
+                "d": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Сила, стил и харизма</p>",
+                    "width": "fill",
+                    "alignment": "center",
+                    "type_preset": "rte",
+                    "text_color": "{{ settings.color_palette.foreground }}"
+                  }
+                },
+                "b": {
+                  "type": "button",
+                  "settings": {
+                    "label": "Пазарувай Мъж",
+                    "link": "shopify://collections/мъжки-парфюми",
+                    "style_class": "button-custom",
+                    "custom_button_background": "{{ settings.color_palette.color1 }}",
+                    "custom_button_text": "{{ settings.color_palette.background }}",
+                    "custom_button_border": "{{ settings.color_palette.color1 }}"
+                  }
+                }
+              },
+              "block_order": [
+                "t",
+                "d",
+                "b"
+              ]
+            },
+            "k3": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "horizontal_alignment_flex_direction_column": "center",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 14,
+                "background_color": "{{ settings.color_palette.color2 }}",
+                "padding-block-start": 48,
+                "padding-block-end": 48,
+                "padding-inline-start": 24,
+                "padding-inline-end": 24
+              },
+              "blocks": {
+                "t": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Unisex & Luxury Collection</p>",
+                    "width": "fill",
+                    "alignment": "center",
+                    "type_preset": "h3",
+                    "text_color": "{{ settings.color_palette.foreground }}"
+                  }
+                },
+                "d": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Ексклузивни нишови аромати</p>",
+                    "width": "fill",
+                    "alignment": "center",
+                    "type_preset": "rte",
+                    "text_color": "{{ settings.color_palette.foreground }}"
+                  }
+                },
+                "b": {
+                  "type": "button",
+                  "settings": {
+                    "label": "Открий Luxury",
+                    "link": "shopify://collections/унисекс-и-лукс",
+                    "style_class": "button-custom",
+                    "custom_button_background": "{{ settings.color_palette.color1 }}",
+                    "custom_button_text": "{{ settings.color_palette.background }}",
+                    "custom_button_border": "{{ settings.color_palette.color1 }}"
+                  }
+                }
+              },
+              "block_order": [
+                "t",
+                "d",
+                "b"
+              ]
+            }
+          },
+          "block_order": [
+            "k1",
+            "k2",
+            "k3"
+          ]
+        }
+      },
+      "block_order": [
+        "k_head",
+        "k_row"
+      ],
+      "settings": {
+        "content_direction": "column",
+        "horizontal_alignment_flex_direction_column": "center",
+        "gap": 28,
+        "section_width": "page-width",
+        "padding-block-start": 40,
+        "padding-block-end": 56
+      }
+    },
+    "best_bb": {
+      "type": "product-list",
+      "blocks": {
+        "static-header": {
+          "type": "_product-list-content",
+          "static": true,
+          "settings": {
+            "content_direction": "column",
+            "horizontal_alignment_flex_direction_column": "center",
+            "gap": 8,
+            "width": "fill"
+          },
+          "blocks": {
+            "ttl": {
+              "type": "_product-list-text",
+              "settings": {
+                "text": "<h3>Нашите Бестселъри</h3>",
+                "width": "fill",
+                "alignment": "center",
+                "type_preset": "h2"
+              }
+            },
+            "sub": {
+              "type": "_product-list-text",
+              "settings": {
+                "text": "<p>Най-предпочитаните иконични аромати с италианско качество</p>",
+                "width": "fill",
+                "alignment": "center",
+                "type_preset": "rte"
+              }
+            },
+            "btn": {
+              "type": "_product-list-button",
+              "settings": {
+                "label": "Виж всички",
+                "style_class": "link"
+              }
+            }
+          },
+          "block_order": [
+            "ttl",
+            "sub",
+            "btn"
+          ]
+        },
+        "static-product-card": {
+          "type": "_product-card",
+          "static": true,
+          "settings": {
+            "product_card_gap": 4
+          },
+          "blocks": {
+            "gal": {
+              "type": "_product-card-gallery",
+              "settings": {
+                "image_ratio": "adapt"
+              }
+            },
+            "ptitle": {
+              "type": "product-title",
+              "settings": {
+                "alignment": "left",
+                "type_preset": "h4"
+              }
+            },
+            "price": {
+              "type": "price",
+              "settings": {
+                "type_preset": "h6",
+                "alignment": "left"
+              }
+            }
+          },
+          "block_order": [
+            "gal",
+            "ptitle",
+            "price"
+          ]
+        }
+      },
+      "settings": {
+        "collection": "бестселъри",
+        "layout_type": "grid",
+        "max_products": 8,
+        "columns": 4,
+        "mobile_columns": "2",
+        "columns_gap": 8,
+        "rows_gap": 24,
+        "section_width": "page-width",
+        "horizontal_alignment": "center",
+        "gap": 28,
+        "background_color": "{{ settings.color_palette.background }}",
+        "padding-block-start": 48,
+        "padding-block-end": 48
+      }
+    },
+    "story_bb": {
+      "type": "section",
+      "blocks": {
+        "s_head": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Италианско майсторство среща френския лукс</p>",
+            "width": "fill",
+            "alignment": "center",
+            "type_preset": "h2",
+            "text_color": "{{ settings.color_palette.background }}"
+          }
+        },
+        "s_text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>В BeautyBag вярваме, че луксозният парфюм не трябва да бъде недостижим. Нашите парфюми са създадени в Италия от Chogan Group S.p.A., използващи натурални френски есенции от световната столица на парфюмерията – Грас.</p><p>Благодарение на високата концентрация от 30% Extrait de Parfum, вие получавате интензивен, дълготраен и завладяващ аромат на достъпна цена.</p>",
+            "width": "fill",
+            "max_width": "narrow",
+            "alignment": "center",
+            "type_preset": "rte",
+            "text_color": "{{ settings.color_palette.background }}"
+          }
+        }
+      },
+      "block_order": [
+        "s_head",
+        "s_text"
+      ],
+      "settings": {
+        "content_direction": "column",
+        "horizontal_alignment_flex_direction_column": "center",
+        "gap": 20,
+        "section_width": "full-width",
+        "background_color": "{{ settings.color_palette.color1 }}",
+        "padding-block-start": 72,
+        "padding-block-end": 72
+      }
+    },
+    "faq_bb": {
+      "type": "section",
+      "blocks": {
+        "f_head": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Често задавани въпроси</p>",
+            "width": "fill",
+            "alignment": "center",
+            "type_preset": "h2"
+          }
+        },
+        "f_acc": {
+          "type": "accordion",
+          "settings": {
+            "icon": "caret",
+            "dividers": true,
+            "type_preset": "h6"
+          },
+          "blocks": {
+            "q1": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Каква е разликата между Eau de Parfum и Extrait de Parfum?"
+              },
+              "blocks": {
+                "a": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Масовите парфюми съдържат между 10% и 15% есенция (Eau de Parfum). Нашите парфюми са Extrait de Parfum с цели 30% чиста есенция, което гарантира изключителна дълготрайност и интензивност.</p>"
+                  }
+                }
+              },
+              "block_order": [
+                "a"
+              ]
+            },
+            "q2": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Как мога да платя поръчката си?"
+              },
+              "blocks": {
+                "a": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Плащането се извършва с Наложен платеж (в брой или с карта) на куриера при получаване на пратката.</p>"
+                  }
+                }
+              },
+              "block_order": [
+                "a"
+              ]
+            },
+            "q3": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Какви са опциите за доставка?"
+              },
+              "blocks": {
+                "a": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Доставяме за 24/48 часа до личен адрес или офис/автомат с Еконт, Спиди и Pigeon (вкл. Pigeon до адрес и 24/7 автомати). Всички пратки са с опция \"Преглед преди плащане\".</p>"
+                  }
+                }
+              },
+              "block_order": [
+                "a"
+              ]
+            }
+          },
+          "block_order": [
+            "q1",
+            "q2",
+            "q3"
+          ]
+        }
+      },
+      "block_order": [
+        "f_head",
+        "f_acc"
+      ],
+      "settings": {
+        "content_direction": "column",
+        "horizontal_alignment_flex_direction_column": "stretch",
+        "gap": 24,
+        "section_width": "page-width",
+        "padding-block-start": 56,
+        "padding-block-end": 56
+      }
+    },
+    "intro_bb": {
+      "type": "section",
+      "blocks": {
+        "h1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Луксозни италиански парфюми с 30% чиста френска есенция</p>",
+            "width": "fill",
+            "alignment": "center",
+            "type_preset": "h1",
+            "text_color": "{{ settings.color_palette.foreground }}"
+          }
+        },
+        "sub": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Открийте магията на висшата парфюмерия с Extrait de Parfum. 100% Произведено в Италия, с дълготрайност над 12 часа.</p>",
+            "width": "fill",
+            "alignment": "center",
+            "type_preset": "rte",
+            "text_color": "{{ settings.color_palette.foreground }}"
+          }
+        },
+        "btns": {
+          "type": "group",
+          "settings": {
+            "content_direction": "row",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "center",
+            "vertical_alignment": "center",
+            "horizontal_alignment_flex_direction_column": "center",
+            "gap": 16
+          },
+          "blocks": {
+            "b1": {
+              "type": "button",
+              "settings": {
+                "label": "Разгледай колекцията",
+                "link": "shopify://collections/all",
+                "style_class": "button-custom",
+                "custom_button_background": "{{ settings.color_palette.color1 }}",
+                "custom_button_text": "{{ settings.color_palette.background }}",
+                "custom_button_border": "{{ settings.color_palette.color1 }}"
+              }
+            },
+            "b2": {
+              "type": "button",
+              "settings": {
+                "label": "Открий своя аромат",
+                "link": "/search",
+                "style_class": "button-custom",
+                "custom_button_background": "rgba(0,0,0,0)",
+                "custom_button_text": "{{ settings.color_palette.foreground }}",
+                "custom_button_border": "{{ settings.color_palette.foreground }}"
+              }
+            }
+          },
+          "block_order": [
+            "b1",
+            "b2"
+          ]
+        }
+      },
+      "block_order": [
+        "h1",
+        "sub",
+        "btns"
+      ],
+      "settings": {
+        "content_direction": "column",
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 20,
+        "section_width": "page-width",
+        "background_color": "{{ settings.color_palette.color2 }}",
+        "padding-block-start": 56,
+        "padding-block-end": 56
+      }
+    }
+  },
+  "order": [
+    "hero_bb",
+    "intro_bb",
+    "trust_bb",
+    "collections_bb",
+    "best_bb",
+    "story_bb",
+    "faq_bb"
+  ]
+}
