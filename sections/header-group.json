@@ -14,6 +14,35 @@
     "header_announcements_9jGBFp": {
       "type": "header-announcements",
       "blocks": {
+        "announcement_Itl002": {
+          "type": "_announcement",
+          "settings": {
+            "text": "🇮🇹 100% Произведено в Италия",
+            "link": "",
+            "font": "var(--font-subheading--family)",
+            "font_size": "0.75rem",
+            "weight": "",
+            "letter_spacing": "normal",
+            "case": "none",
+            "text_color": ""
+          },
+          "blocks": {}
+        },
+        "announcement_zJJL4Y": {
+          "type": "_announcement",
+          "name": "t:names.announcement",
+          "settings": {
+            "text": "📦 Безплатна доставка за поръчки над 70 евро.",
+            "link": "",
+            "font": "var(--font-subheading--family)",
+            "font_size": "0.75rem",
+            "weight": "",
+            "letter_spacing": "normal",
+            "case": "none",
+            "text_color": ""
+          },
+          "blocks": {}
+        },
         "announcement_FhP7CR": {
           "type": "_announcement",
           "name": "t:names.announcement",
@@ -42,26 +71,13 @@
             "text_color": ""
           },
           "blocks": {}
-        },
-        "announcement_Itl002": {
-          "type": "_announcement",
-          "settings": {
-            "text": "🇮🇹 100% Произведено в Италия",
-            "link": "",
-            "font": "var(--font-subheading--family)",
-            "font_size": "0.75rem",
-            "weight": "",
-            "letter_spacing": "normal",
-            "case": "none",
-            "text_color": ""
-          },
-          "blocks": {}
         }
       },
       "block_order": [
+        "announcement_Itl002",
+        "announcement_zJJL4Y",
         "announcement_FhP7CR",
-        "announcement_BxgCk9",
-        "announcement_Itl002"
+        "announcement_BxgCk9"
       ],
       "name": "t:names.announcement_bar",
       "settings": {
