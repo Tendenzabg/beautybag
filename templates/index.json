@@ -92,13 +92,13 @@
                 "link": "shopify://collections/all",
                 "open_in_new_tab": false,
                 "style_class": "button-custom",
-                "custom_button_background": "",
+                "custom_button_background": "#FFFFFF00",
                 "custom_button_text": "#6A4A43",
                 "custom_button_border": "#6A4A43",
                 "link_text_color": "",
-                "width": "fit-content",
-                "custom_width": 100,
-                "width_mobile": "fit-content",
+                "width": "custom",
+                "custom_width": 25,
+                "width_mobile": "custom",
                 "custom_width_mobile": 100
               },
               "blocks": {}
