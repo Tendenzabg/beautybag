@@ -163,6 +163,9 @@
     "duties_included": "С включено мито.",
     "shipping_policy_html": "<a href=\"{{ link }}\">Доставката</a> се изчислява при плащане.",
     "taxes_included": "С включени данъци.",
+    "product_card_format": "Размер",
+    "product_card_size_ml": "{{ size }} мл",
+    "product_card_buy_now": "Купи сега",
     "product_badge_sold_out": "Изчерпано",
     "product_badge_sale": "Разпродажба",
     "grid_view": {

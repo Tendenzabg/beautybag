@@ -29,6 +29,7 @@
     {% if product.available and settings.quick_add or settings.mobile_quick_add %}
       {% render 'quick-add', product: product, section_id: section.id %}
     {% endif %}
+    {% render 'product-card-formats', product: product %}
   {% endunless %}
 {% endcapture %}
 

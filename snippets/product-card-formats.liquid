@@ -1,0 +1,245 @@
+{%- doc -%}
+  Renders the hover panel of a collection product card: format pills (e.g. 30 ml / 70 ml, from the
+  linked product in the `other_format` metafield) and a "Buy now" button that adds the chosen
+  variant to the cart and goes straight to checkout. Works without JavaScript (radio inputs + form).
+  Hidden on touch devices and when nothing can be bought.
+
+  @param {object} product - The product object of the card
+
+  @example
+  {% render 'product-card-formats', product: product %}
+{%- enddoc -%}
+
+{%- liquid
+  assign bb_other = product.metafields.custom.other_format.value
+  assign bb_cur_variant = product.selected_or_first_available_variant
+  assign bb_cur_ml = product.metafields.custom.size_ml.value | plus: 0
+  assign bb_cur_refill = product.metafields.custom.is_refill.value
+
+  assign bb_other_available = false
+  if bb_other != blank
+    assign bb_other_variant = bb_other.selected_or_first_available_variant
+    assign bb_other_ml = bb_other.metafields.custom.size_ml.value | plus: 0
+    assign bb_other_refill = bb_other.metafields.custom.is_refill.value
+    if bb_other.available
+      assign bb_other_available = true
+    endif
+  endif
+
+  assign bb_can_buy = false
+  if product.available or bb_other_available
+    assign bb_can_buy = true
+  endif
+
+  # Order the pills by size, smallest first; the pill matching the card (if available) is preselected.
+  assign bb_other_first = false
+  if bb_other != blank and bb_other_ml < bb_cur_ml
+    assign bb_other_first = true
+  endif
+  assign bb_check_current = false
+  if product.available
+    assign bb_check_current = true
+  endif
+-%}
+
+{%- if bb_can_buy and product.id != blank -%}
+  <div class="bb-cardbuy">
+    <form
+      action="{{ routes.cart_add_url }}"
+      method="post"
+      class="bb-cardbuy__form"
+    >
+      <input type="hidden" name="return_to" value="/checkout">
+      <input type="hidden" name="quantity" value="1">
+
+      {%- if bb_other != blank -%}
+        <fieldset class="bb-cardbuy__sizes">
+          <legend class="visually-hidden">{{ 'content.product_card_format' | t }}</legend>
+          {%- if bb_other_first -%}
+            <label class="bb-cardbuy__size">
+              <input
+                type="radio"
+                name="id"
+                value="{{ bb_other_variant.id }}"
+                {% if bb_other_available and bb_check_current == false %}
+                  checked
+                {% endif %}
+                {% unless bb_other_available %}
+                  disabled
+                {% endunless %}
+              >
+              <span>{{ 'content.product_card_size_ml' | t: size: bb_other_ml }}{% if bb_other_refill %} ↻{% endif %}</span>
+            </label>
+          {%- endif -%}
+
+          <label class="bb-cardbuy__size">
+            <input
+              type="radio"
+              name="id"
+              value="{{ bb_cur_variant.id }}"
+              {% if bb_check_current %}
+                checked
+              {% endif %}
+              {% unless product.available %}
+                disabled
+              {% endunless %}
+            >
+            <span>{{ 'content.product_card_size_ml' | t: size: bb_cur_ml }}{% if bb_cur_refill %} ↻{% endif %}</span>
+          </label>
+
+          {%- unless bb_other_first -%}
+            <label class="bb-cardbuy__size">
+              <input
+                type="radio"
+                name="id"
+                value="{{ bb_other_variant.id }}"
+                {% if bb_other_available and bb_check_current == false %}
+                  checked
+                {% endif %}
+                {% unless bb_other_available %}
+                  disabled
+                {% endunless %}
+              >
+              <span>{{ 'content.product_card_size_ml' | t: size: bb_other_ml }}{% if bb_other_refill %} ↻{% endif %}</span>
+            </label>
+          {%- endunless -%}
+        </fieldset>
+      {%- else -%}
+        <input type="hidden" name="id" value="{{ bb_cur_variant.id }}">
+      {%- endif -%}
+
+      <button type="submit" class="bb-cardbuy__buy">
+        {{- 'content.product_card_buy_now' | t -}}
+      </button>
+    </form>
+  </div>
+{%- endif -%}
+
+{% stylesheet %}
+  .bb-cardbuy {
+    --bb-cardbuy-radius: var(--style-border-radius-buttons-primary, 100px);
+
+    position: absolute;
+    inset-inline: 0;
+    inset-block-end: 0;
+    z-index: var(--layer-raised);
+    padding: var(--padding-sm);
+    display: none;
+    pointer-events: none;
+  }
+
+  /* Only on devices with hover: touch users tap through to the product page. */
+  @media (hover: hover) {
+    .bb-cardbuy {
+      display: block;
+      opacity: 0;
+      transform: translateY(8px);
+      transition:
+        opacity var(--animation-speed-slow) var(--animation-easing),
+        transform var(--animation-speed-slow) var(--animation-easing);
+    }
+
+    product-card:is(:hover, :focus-within) .bb-cardbuy {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .bb-cardbuy {
+      transition: none;
+      transform: none;
+    }
+  }
+
+  .bb-cardbuy__form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 10px;
+    border-radius: min(var(--bb-cardbuy-radius), 20px);
+    background: color-mix(in srgb, var(--color-background) 94%, transparent);
+    backdrop-filter: blur(6px);
+  }
+
+  .bb-cardbuy__sizes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    min-width: 0;
+  }
+
+  .bb-cardbuy__size {
+    position: relative;
+    display: inline-flex;
+    min-width: 0;
+  }
+
+  .bb-cardbuy__size input {
+    position: absolute;
+    inset: 0;
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  .bb-cardbuy__size span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 4.5rem;
+    padding: 0.45rem 0.9rem;
+    border: 1px solid var(--color-border, currentcolor);
+    border-radius: var(--bb-cardbuy-radius);
+    color: var(--color-foreground);
+    font-size: 0.875rem;
+    line-height: 1.2;
+    white-space: nowrap;
+  }
+
+  .bb-cardbuy__size input:checked + span {
+    border-color: var(--color-primary-button-background);
+    background: var(--color-primary-button-background);
+    color: var(--color-primary-button-text);
+  }
+
+  .bb-cardbuy__size input:focus-visible + span {
+    outline: 2px solid var(--color-foreground);
+    outline-offset: 2px;
+  }
+
+  .bb-cardbuy__size input:disabled {
+    cursor: not-allowed;
+  }
+
+  .bb-cardbuy__size input:disabled + span {
+    opacity: 0.4;
+    text-decoration: line-through;
+  }
+
+  .bb-cardbuy__buy {
+    width: 100%;
+    padding: 0.7rem 1rem;
+    border: 0;
+    border-radius: var(--bb-cardbuy-radius);
+    background: var(--color-primary-button-background);
+    color: var(--color-primary-button-text);
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .bb-cardbuy__buy:hover {
+    opacity: 0.9;
+  }
+
+  .bb-cardbuy__buy:focus-visible {
+    outline: 2px solid var(--color-foreground);
+    outline-offset: 2px;
+  }
+{% endstylesheet %}
