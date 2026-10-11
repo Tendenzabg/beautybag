@@ -1,5 +1,8 @@
 # Changelog
 
+## v1.16 — 2026-10-11
+- Scheda prodotto: nuovo blocco sotto gli accordion con il pulsante "Изтегли техническата карта (PDF)", mostrato solo se il prodotto ha il metafield `custom.tech_sheet` (file). Primo prodotto con scheda: 002M.
+
 ## v1.15 — 2026-10-11
 - Salvate le modifiche fatte nell'editor sul tema live: transizioni di pagina attive (anche verso il prodotto principale), carrello laterale che si apre dopo l'aggiunta, acquisto rapido su mobile attivo, collezione "бестселъри" per lo stato vuoto, sfondo pulsante primario #6A61A7DE (leggermente trasparente), testo spedizione nell'accordion prodotto aggiornato (Pigeon al posto dell'automat 24/7).
 

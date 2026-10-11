@@ -837,6 +837,12 @@
                 "a2",
                 "a3"
               ]
+            },
+            "bb_techsheet": {
+              "type": "custom-liquid",
+              "settings": {
+                "custom_liquid": "{%- assign bb_ts = product.metafields.custom.tech_sheet.value -%}{%- if bb_ts != blank -%}<p><a href=\"{{ bb_ts.url }}\" target=\"_blank\" rel=\"noopener\" class=\"button button-secondary\">Изтегли техническата карта (PDF)</a></p>{%- endif -%}"
+              }
             }
           },
           "block_order": [
@@ -848,7 +854,8 @@
             "bb_trust",
             "bb_intro",
             "text_aEtTtq",
-            "bb_accordion"
+            "bb_accordion",
+            "bb_techsheet"
           ]
         }
       },
