@@ -1,5 +1,8 @@
 # Changelog
 
+## v1.8 — 2026-10-11
+- Scheda prodotto: ripristinata la riga accordion "Олфактивна пирамида" (prima riga) con i metafield Върхови нотки, Сърдечни нотки, Базови нотки (ogni riga appare solo se compilata).
+
 ## v1.7 — 2026-10-11
 - Nuova palette ispirata a chogangroupspa.com: sfondo #FFFFFF, testo #1D1D1D, viola #6A61A7 (pulsanti/accenti), lilla chiaro #EDEBF5 (riquadri/linee). Badge "esaurito" rosa #F6C6E2.
 - Font: Instrument Sans per titoli, sottotitoli e testo (prima Prata + Inter). Dimensioni titoli leggermente ridotte.

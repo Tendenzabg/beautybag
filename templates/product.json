@@ -312,6 +312,23 @@
                 "type_preset": "h6"
               },
               "blocks": {
+                "a4": {
+                  "type": "_accordion-row",
+                  "settings": {
+                    "heading": "🌿 Олфактивна пирамида"
+                  },
+                  "blocks": {
+                    "t": {
+                      "type": "custom-liquid",
+                      "settings": {
+                        "custom_liquid": "{%- assign bb_top = product.metafields.custom.top_notes.value -%}{%- assign bb_heart = product.metafields.custom.heart_notes.value -%}{%- assign bb_base = product.metafields.custom.base_notes.value -%}{%- if bb_top != blank or bb_heart != blank or bb_base != blank -%}<ul style='list-style:none;padding:0;margin:0;display:grid;gap:.5rem'>{%- if bb_top != blank -%}<li><strong>Върхови нотки:</strong> {{ bb_top | join: ', ' }}</li>{%- endif -%}{%- if bb_heart != blank -%}<li><strong>Сърдечни нотки:</strong> {{ bb_heart | join: ', ' }}</li>{%- endif -%}{%- if bb_base != blank -%}<li><strong>Базови нотки:</strong> {{ bb_base | join: ', ' }}</li>{%- endif -%}</ul>{%- endif -%}"
+                      }
+                    }
+                  },
+                  "block_order": [
+                    "t"
+                  ]
+                },
                 "a1": {
                   "type": "_accordion-row",
                   "settings": {
@@ -365,6 +382,7 @@
                 }
               },
               "block_order": [
+                "a4",
                 "a1",
                 "a2",
                 "a3"
