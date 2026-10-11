@@ -1,5 +1,8 @@
 # Changelog
 
+## v1.2 — 2026-10-11
+- Scheda prodotto: rimosso il sottotitolo "Олфактивно вдъхновение: marca - modello" sotto il prezzo (il disclaimer legale nell'accordion resta).
+
 ## v1.1 — 2026-10-11
 - Hero: slideshow con 2 immagini (flacone nero con splash dorato, flacone bianco con splash di latte), autoplay 6 s, pulsante in basso a sinistra.
 - Titolo H1, sottotitolo e 2 pulsanti spostati nella nuova sezione `intro_bb` sotto l'hero.
