@@ -9,9 +9,12 @@ Tema **Horizon** personalizzato: palette "Premium Botanical & French Luxury", ti
 - `CHANGELOG.md` → storico delle versioni
 
 ## Versioni
-Ogni modifica = un commit + una versione (tag `vX.Y`) e una voce nel `CHANGELOG.md`.
-Per tornare a una versione precedente: `git checkout vX.Y` oppure ripubblicare il tema da quel tag.
+- Ramo di lavoro (quello collegato a Shopify): `claude/theme-live`.
+- Ogni modifica = un commit su `claude/theme-live` + uno snapshot di versione `claude/theme-vX.Y` + una voce nel `CHANGELOG.md`.
+- Per tornare indietro: ricollegare il tema al ramo `claude/theme-vX.Y` desiderato (o fare un nuovo commit che ripristina quei file).
+
+Nota: nelle sessioni Claude si può scrivere solo su rami `claude/*`, per questo non si usano `main` e i tag.
 
 ## Collegare il tema a Shopify
-Shopify admin → Negozio online → Temi → Aggiungi tema → **Connetti da GitHub** → repo `Tendenzabg/beautybag`, ramo `main`.
-Da quel momento ogni push su `main` aggiorna il tema collegato.
+Shopify admin → Negozio online → Temi → Aggiungi tema → **Connetti da GitHub** → repo `Tendenzabg/beautybag`, ramo `claude/theme-live`.
+Da quel momento ogni push su quel ramo aggiorna il tema collegato.
