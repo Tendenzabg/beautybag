@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.1 — 2026-10-11
+- Hero: slideshow con 2 immagini (flacone nero con splash dorato, flacone bianco con splash di latte), autoplay 6 s, pulsante in basso a sinistra.
+- Titolo H1, sottotitolo e 2 pulsanti spostati nella nuova sezione `intro_bb` sotto l'hero.
+
 ## v1.0 — 2026-10-11
 - Primo salvataggio del tema "Horizon - BeautyBag Botanical Fonts".
 - Palette Premium Botanical & French Luxury (avorio #FAF7F0, tortora #5E554C, lino #E8E0D0, salvia #55634A, oro opaco #BFA06A).
