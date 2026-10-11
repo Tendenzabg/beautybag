@@ -2,15 +2,18 @@
   Renders the hover panel of a collection product card: format pills (e.g. 30 ml / 70 ml, from the
   linked product in the `other_format` metafield) and a "Buy now" button that adds the chosen
   variant to the cart and goes straight to checkout. Works without JavaScript (radio inputs + form).
-  Hidden on touch devices and when nothing can be bought.
+  Two layouts: 'overlay' (over the card image, only on hover-capable devices) and 'inline' (below the
+  price, only on touch devices). Hidden when nothing can be bought.
 
   @param {object} product - The product object of the card
+  @param {string} [layout] - 'overlay' (default) or 'inline'
 
   @example
-  {% render 'product-card-formats', product: product %}
+  {% render 'product-card-formats', product: product, layout: 'inline' %}
 {%- enddoc -%}
 
 {%- liquid
+  assign bb_layout = layout | default: 'overlay'
   assign bb_other = product.metafields.custom.other_format.value
   assign bb_cur_variant = product.selected_or_first_available_variant
   assign bb_cur_ml = product.metafields.custom.size_ml.value | plus: 0
@@ -43,7 +46,7 @@
 -%}
 
 {%- if bb_can_buy and product.id != blank -%}
-  <div class="bb-cardbuy">
+  <div class="bb-cardbuy bb-cardbuy--{{ bb_layout }}">
     <form
       action="{{ routes.cart_add_url }}"
       method="post"
@@ -119,18 +122,21 @@
   .bb-cardbuy {
     --bb-cardbuy-radius: var(--style-border-radius-buttons-primary, 100px);
 
+    display: none;
+  }
+
+  /* Overlay on the image: only on devices with hover. */
+  .bb-cardbuy--overlay {
     position: absolute;
     inset-inline: 0;
     inset-block-end: 0;
     z-index: var(--layer-raised);
     padding: var(--padding-sm);
-    display: none;
     pointer-events: none;
   }
 
-  /* Only on devices with hover: touch users tap through to the product page. */
   @media (hover: hover) {
-    .bb-cardbuy {
+    .bb-cardbuy--overlay {
       display: block;
       opacity: 0;
       transform: translateY(8px);
@@ -139,10 +145,35 @@
         transform var(--animation-speed-slow) var(--animation-easing);
     }
 
-    product-card:is(:hover, :focus-within) .bb-cardbuy {
+    product-card:is(:hover, :focus-within) .bb-cardbuy--overlay {
       opacity: 1;
       transform: translateY(0);
       pointer-events: auto;
+    }
+  }
+
+  /* Below the price: touch devices, where there is no hover. */
+  @media (hover: none) {
+    .bb-cardbuy--inline {
+      display: block;
+      position: relative;
+      z-index: var(--layer-raised);
+      padding-block-start: var(--padding-xs, 0.5rem);
+    }
+
+    .bb-cardbuy--inline .bb-cardbuy__form {
+      padding: 0;
+      background: none;
+      backdrop-filter: none;
+    }
+
+    .bb-cardbuy--inline .bb-cardbuy__sizes {
+      justify-content: flex-start;
+    }
+
+    .bb-cardbuy--inline .bb-cardbuy__size span {
+      min-width: 0;
+      padding: 0.4rem 0.75rem;
     }
   }
 

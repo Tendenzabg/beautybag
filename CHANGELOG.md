@@ -1,5 +1,8 @@
 # Changelog
 
+## v1.10 — 2026-10-11
+- Schede prodotto nelle collezioni: su mobile/touch (senza hover) i formati 30/70 ml e "Купи сега" appaiono sotto il prezzo; su desktop resta il pannello al passaggio del mouse (snippet `product-card-formats`, parametro `layout`).
+
 ## v1.9 — 2026-10-11
 - Pagina collezioni: al passaggio del mouse sulla foto della card compare un pannello con i formati (es. 30 ml / 70 ml, dal metafield `other_format`) e il pulsante "Купи сега" che aggiunge il formato scelto e va direttamente al checkout. Solo su dispositivi con mouse; appare solo se il prodotto (o l'altro formato) è disponibile. Nuovo snippet `product-card-formats`, chiavi locale `content.product_card_*`.
 
