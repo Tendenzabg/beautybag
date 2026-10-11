@@ -1,5 +1,8 @@
 # Changelog
 
+## v1.15 — 2026-10-11
+- Salvate le modifiche fatte nell'editor sul tema live: transizioni di pagina attive (anche verso il prodotto principale), carrello laterale che si apre dopo l'aggiunta, acquisto rapido su mobile attivo, collezione "бестселъри" per lo stato vuoto, sfondo pulsante primario #6A61A7DE (leggermente trasparente), testo spedizione nell'accordion prodotto aggiornato (Pigeon al posto dell'automat 24/7).
+
 ## v1.14 — 2026-10-11
 - Salvata la modifica fatta nell'editor al testo "Правна забележка" nella scheda prodotto (accordion): ora non cita più marca e modello nella frase iniziale.
 
