@@ -902,6 +902,17 @@ button.shopify-payment-button__button--unbranded:hover:not([disabled]) {
   --button-border-color: var(--color-primary-button-hover-border);
 }
 
+/* Optional vertical gradient on primary buttons (theme setting "button_gradient_enabled"). */
+.button:not(.button-secondary, .button-unstyled, .button-custom),
+button.shopify-payment-button__button--unbranded {
+  background-image: var(--button-gradient, none);
+}
+
+.button:not(.button-secondary, .button-unstyled, .button-custom):hover,
+button.shopify-payment-button__button--unbranded:hover:not([disabled]) {
+  filter: brightness(0.92);
+}
+
 .button-secondary {
   --button-color: var(--color-secondary-button-text);
   --button-background-color: var(--color-secondary-button-background);

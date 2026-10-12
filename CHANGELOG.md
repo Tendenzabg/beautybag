@@ -1,5 +1,8 @@
 # Changelog
 
+## v1.22 — 2026-10-12
+- Pulsanti primari con sfumatura verticale viola-magenta (#924A87 → #6A61A7). Nuove impostazioni tema: `button_gradient_enabled`, `button_gradient_start`, `button_gradient_end`. Pulsanti secondari e «Купи сега» trasparenti invariati; al hover leggermente più scuri.
+
 ## v1.21 — 2026-10-12
 - Logo mobile ancora più grande: altezza da 38 a 50 px (`logo_height_mobile`).
 - Incluse le modifiche fatte nell'editor sul tema v1.20 (home).

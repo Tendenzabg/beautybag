@@ -1331,6 +1331,26 @@
         "default": 100
       },
       {
+        "type": "checkbox",
+        "id": "button_gradient_enabled",
+        "label": "t:settings.button_gradient_enabled",
+        "default": false
+      },
+      {
+        "type": "color",
+        "id": "button_gradient_start",
+        "label": "t:settings.button_gradient_start",
+        "default": "#924A87",
+        "visible_if": "{{ settings.button_gradient_enabled }}"
+      },
+      {
+        "type": "color",
+        "id": "button_gradient_end",
+        "label": "t:settings.button_gradient_end",
+        "default": "#6A61A7",
+        "visible_if": "{{ settings.button_gradient_enabled }}"
+      },
+      {
         "type": "select",
         "id": "type_font_button_primary",
         "label": "t:settings.font",
