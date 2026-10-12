@@ -1,0 +1,101 @@
+{% doc %}
+  Free Shipping Bar
+
+  Progress bar showing how much is left to reach free delivery. Enabled and sized by the
+  theme settings `free_shipping_bar_enabled` and `free_shipping_threshold` (in shop currency units).
+  Delivery is free for orders strictly above the threshold. Reads the global `cart` object.
+
+  @example
+  {% render 'free-shipping-bar' %}
+{% enddoc %}
+
+{%- liquid
+  assign show_bar = false
+  if settings.free_shipping_bar_enabled and cart.empty? == false and settings.free_shipping_threshold > 0
+    assign show_bar = true
+  endif
+
+  assign threshold_cents = settings.free_shipping_threshold | times: 100
+  assign unlocked = false
+  assign progress = 0
+  if cart.total_price > threshold_cents
+    assign unlocked = true
+    assign progress = 100
+  elsif threshold_cents > 0
+    assign progress = cart.total_price | times: 100.0 | divided_by: threshold_cents | round: 1
+    assign remaining_cents = threshold_cents | minus: cart.total_price | plus: 1
+    assign remaining_money = remaining_cents | money
+  endif
+-%}
+
+{%- if show_bar -%}
+  <div
+    class="free-shipping-bar{% if unlocked %} free-shipping-bar--unlocked{% endif %}"
+    style="--free-shipping-progress: {{ progress | divided_by: 100.0 }};"
+  >
+    <p class="free-shipping-bar__text" role="status">
+      {%- if unlocked -%}
+        {{ 'content.free_shipping_unlocked' | t }}
+      {%- else -%}
+        {{ 'content.free_shipping_remaining' | t: amount: remaining_money }}
+      {%- endif -%}
+    </p>
+    <div
+      class="free-shipping-bar__track"
+      role="progressbar"
+      aria-valuemin="0"
+      aria-valuemax="100"
+      aria-valuenow="{{ progress | floor }}"
+      aria-label="{{ 'content.free_shipping_label' | t }}"
+    >
+      <span class="free-shipping-bar__fill"></span>
+    </div>
+  </div>
+{%- endif -%}
+
+{% stylesheet %}
+  .free-shipping-bar {
+    --free-shipping-bar-height: 0.6rem;
+
+    display: grid;
+    gap: var(--gap-xs);
+    min-width: 0;
+    margin-block-end: var(--margin-lg);
+  }
+
+  .free-shipping-bar__text {
+    margin: 0;
+    font-size: var(--font-size--sm);
+    text-align: center;
+    overflow-wrap: anywhere;
+  }
+
+  .free-shipping-bar__track {
+    position: relative;
+    block-size: var(--free-shipping-bar-height);
+    overflow: hidden;
+    background-color: rgb(var(--color-foreground-rgb) / var(--opacity-10));
+    border-radius: var(--free-shipping-bar-height);
+  }
+
+  .free-shipping-bar__fill {
+    position: absolute;
+    inset: 0;
+    background-color: var(--color-primary-button-background);
+    background-image: var(--button-gradient, none);
+    border-radius: inherit;
+    transform: scaleX(var(--free-shipping-progress, 0));
+    transform-origin: left center;
+    transition: transform var(--animation-speed-slow) var(--animation-easing);
+  }
+
+  [dir='rtl'] .free-shipping-bar__fill {
+    transform-origin: right center;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .free-shipping-bar__fill {
+      transition: none;
+    }
+  }
+{% endstylesheet %}

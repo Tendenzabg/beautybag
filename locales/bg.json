@@ -130,6 +130,9 @@
     "back_to_main_menu": "Назад към главното меню"
   },
   "content": {
+    "free_shipping_remaining": "Добавете още {{ amount }} за безплатна доставка",
+    "free_shipping_unlocked": "Поздравления! Имате безплатна доставка!",
+    "free_shipping_label": "Напредък към безплатна доставка",
     "reviews": "мнения",
     "language": "Език",
     "localization_region_and_language": "Регион и език",

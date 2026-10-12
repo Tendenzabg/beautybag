@@ -1564,6 +1564,24 @@
       },
       {
         "type": "checkbox",
+        "id": "free_shipping_bar_enabled",
+        "label": "t:settings.free_shipping_bar_enabled",
+        "default": true
+      },
+      {
+        "type": "range",
+        "id": "free_shipping_threshold",
+        "min": 10,
+        "max": 300,
+        "step": 1,
+        "unit": "€",
+        "label": "t:settings.free_shipping_threshold",
+        "info": "t:settings.free_shipping_threshold_info",
+        "default": 70,
+        "visible_if": "{{ settings.free_shipping_bar_enabled }}"
+      },
+      {
+        "type": "checkbox",
         "id": "show_add_discount_code",
         "label": "t:settings.add_discount_code",
         "default": true

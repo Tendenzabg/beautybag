@@ -163,6 +163,9 @@
     }
   },
   "content": {
+    "free_shipping_remaining": "Add {{ amount }} more for free shipping",
+    "free_shipping_unlocked": "You have free shipping!",
+    "free_shipping_label": "Progress towards free shipping",
     "cancel": "Cancel",
     "discount": "Discount",
     "account_title": "Account",

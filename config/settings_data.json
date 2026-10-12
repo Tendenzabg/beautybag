@@ -57,6 +57,8 @@
     "badge_text_transform": "none",
     "palette_primary_button_background": "#6A61A7DE",
     "button_gradient_enabled": true,
+    "free_shipping_bar_enabled": true,
+    "free_shipping_threshold": 70,
     "button_gradient_start": "#924A87",
     "button_gradient_end": "#6A61A7",
     "palette_primary_button_text": "{{ settings.color_palette.background }}",
