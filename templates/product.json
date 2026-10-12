@@ -378,7 +378,7 @@
                     "t": {
                       "type": "text",
                       "settings": {
-                        "text": "<p><strong>100% Произведено в Италия</strong><br>Chogan Group S.p.A.</p>",
+                        "text": "<p><strong>100% Произведено в Italy 🇮🇹</strong><br/>Chogan Group S.p.A.</p>",
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
@@ -621,7 +621,7 @@
                     "t": {
                       "type": "text",
                       "settings": {
-                        "text": "<p><strong>Безплатен преглед & Наложен платеж</strong><br>Плащане при получаване</p>",
+                        "text": "<p><strong>Безплатна доставка за поръчки над 70€</strong><br/>Плащане при получаване</p>",
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
@@ -842,7 +842,8 @@
               "type": "custom-liquid",
               "settings": {
                 "custom_liquid": "{%- assign bb_ts = product.metafields.custom.tech_sheet.value -%}{%- if bb_ts != blank -%}<p><a href=\"{{ bb_ts.url }}\" target=\"_blank\" rel=\"noopener\" class=\"button button-secondary\">Изтегли техническата карта (PDF)</a></p>{%- endif -%}"
-              }
+              },
+              "blocks": {}
             }
           },
           "block_order": [
