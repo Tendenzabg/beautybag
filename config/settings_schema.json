@@ -1573,7 +1573,7 @@
         "id": "free_shipping_threshold",
         "min": 10,
         "max": 300,
-        "step": 1,
+        "step": 5,
         "unit": "€",
         "label": "t:settings.free_shipping_threshold",
         "info": "t:settings.free_shipping_threshold_info",

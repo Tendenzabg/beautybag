@@ -1,5 +1,8 @@
 # Changelog
 
+## v1.24 — 2026-10-12
+- Corretto un errore della v1.23: l'impostazione `free_shipping_threshold` aveva troppi passi (290 con step 1; Shopify ne accetta max 101), quindi Shopify rifiutava `settings_schema.json` e lo svuotava, scomponendo la home. Ora step 5 (58 passi). Tutti i range del tema verificati.
+
 ## v1.23 — 2026-10-12
 - Barra «consegna gratuita» nel carrello e nel drawer: mostra quanto manca per superare 70 € (testi bulgari in `locales/bg.json`) e, raggiunta la soglia, il messaggio di conferma. Nuove impostazioni tema (Carrello): `free_shipping_bar_enabled`, `free_shipping_threshold` (70). Nuovo snippet `free-shipping-bar`, richiamato da `cart-products`. La soglia deve coincidere con la tariffa impostata nelle spedizioni di Shopify.
 
