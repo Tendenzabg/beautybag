@@ -1582,7 +1582,7 @@
         "video_position": "cover",
         "background_image_position": "cover",
         "toggle_overlay": true,
-        "overlay_color": "#c1348bab",
+        "overlay_color": "#C1348BCC",
         "overlay_style": "gradient",
         "gradient_direction": "to bottom",
         "border": "none",
