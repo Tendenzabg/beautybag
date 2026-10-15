@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.27 — 2026-10-15
+- Lingue: tutte le scritte rimaste in inglese nella versione bulgara ora sono in bulgaro (pagina 404, carrello «Количка», «Може да ви хареса и», «Колекции», pulsante del modulo contatti, «Абонирай се» nel footer, pagina password, «100% Произведено в Италия», «Унисекс и лукс колекция»). I link delle tre collezioni nella home ora puntano agli handle latini.
+- In Shopify (non nei file del tema): menu e pagina Contatti in bulgaro; traduzioni inglesi registrate per tema, menu, collezioni, pagine, policy e prodotti attivi.
+
 ## v1.26 — 2026-10-15
 - Selettore lingua con bandierine (BG, EN; pronte anche IT, DE, RO) nell'header e nel menu mobile. Nuovo snippet `language-flags` (funziona anche senza JavaScript: ogni bandierina invia il modulo di localizzazione). Nuova impostazione header `language_selector_style` (`flags` predefinito, `dropdown` per il vecchio menu a tendina), con chiavi in `locales/en.default.schema.json`.
 - Il selettore con le bandierine è un menu a discesa: bottone con la bandierina della lingua attiva che apre l'elenco (bandierina + nome). Nuovo snippet `language-flag-icon`; nuovo componente `language-flags-component` in `assets/localization.js` (chiude il menu con clic fuori e Esc). Nel menu mobile l'elenco si apre dentro il pannello.

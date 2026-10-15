@@ -420,7 +420,7 @@
                 "t": {
                   "type": "text",
                   "settings": {
-                    "text": "<p><strong>100% Made in Italy</strong></p>",
+                    "text": "<p><strong>100% Произведено в Италия</strong></p>",
                     "width": "fill",
                     "max_width": "normal",
                     "alignment": "center",
@@ -998,7 +998,7 @@
                   "type": "button",
                   "settings": {
                     "label": "Пазарувай Жена",
-                    "link": "shopify://collections/дамски-парфюми",
+                    "link": "shopify://collections/damski-parfyumi",
                     "open_in_new_tab": false,
                     "style_class": "button",
                     "custom_button_background": "{{ settings.color_palette.color1 }}",
@@ -1113,7 +1113,7 @@
                   "type": "button",
                   "settings": {
                     "label": "Пазарувай Мъж",
-                    "link": "shopify://collections/мъжки-парфюми",
+                    "link": "shopify://collections/mazhki-parfyumi",
                     "open_in_new_tab": false,
                     "style_class": "button-custom",
                     "custom_button_background": "#6a61a7c2",
@@ -1177,7 +1177,7 @@
                 "t": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Unisex & Luxury Collection</p>",
+                    "text": "<p>Унисекс и лукс колекция</p>",
                     "width": "fill",
                     "max_width": "normal",
                     "alignment": "center",
@@ -1227,8 +1227,8 @@
                 "b": {
                   "type": "button",
                   "settings": {
-                    "label": "Открий Luxury",
-                    "link": "shopify://collections/унисекс-и-лукс",
+                    "label": "Открий лукс колекцията",
+                    "link": "shopify://collections/uniseks-i-luks",
                     "open_in_new_tab": false,
                     "style_class": "button-custom",
                     "custom_button_background": "#6a61a7a1",

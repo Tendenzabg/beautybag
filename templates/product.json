@@ -378,7 +378,7 @@
                     "t": {
                       "type": "text",
                       "settings": {
-                        "text": "<p><strong>100% Произведено в Italy 🇮🇹</strong><br/>Chogan Group S.p.A.</p>",
+                        "text": "<p><strong>100% Произведено в Италия 🇮🇹</strong><br/>Chogan Group S.p.A.</p>",
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
@@ -812,7 +812,7 @@
                 "a3": {
                   "type": "_accordion-row",
                   "settings": {
-                    "heading": "📜 Правна забележка (Disclaimer)",
+                    "heading": "📜 Правна забележка",
                     "open_by_default": false,
                     "icon": "none",
                     "width": 20
