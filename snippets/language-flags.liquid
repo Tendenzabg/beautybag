@@ -13,16 +13,18 @@
 
 {%- liquid
   assign flag_id_suffix = form_id | append: '-' | append: localization_style
+  assign flag_form_id = 'LanguageFlagsForm-' | append: flag_id_suffix
+  assign flag_form_label = 'content.language' | t
 -%}
 <div
   class="language-flags language-flags--{{ localization_style }}"
   style="{{ form_style }}"
 >
   {%- form 'localization',
-    id: 'LanguageFlagsForm-' | append: flag_id_suffix,
+    id: flag_form_id,
     class: 'language-flags__form',
     return_to: back,
-    aria-label: 'content.language' | t
+    aria-label: flag_form_label
   -%}
     <ul
       class="language-flags__list list-unstyled"
