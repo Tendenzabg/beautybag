@@ -1,0 +1,184 @@
+{%- doc -%}
+  Renders a language switch made of flag buttons, one per available language.
+  Works without JavaScript: each button submits the localization form.
+
+  @param {string} form_id - The block or section ID, used to keep generated IDs unique
+  @param {string} localization_style - Where the switch is rendered ('dropdown' or 'drawer')
+  @param {string} [form_style] - The style string applied to the wrapper
+  @param {string} [back] - The URL to redirect to after form submission
+
+  @example
+  {% render 'language-flags', form_id: section.id, localization_style: 'dropdown', form_style: form_style %}
+{%- enddoc -%}
+
+{%- liquid
+  assign flag_id_suffix = form_id | append: '-' | append: localization_style
+-%}
+<div
+  class="language-flags language-flags--{{ localization_style }}"
+  style="{{ form_style }}"
+>
+  {%- form 'localization',
+    id: 'LanguageFlagsForm-' | append: flag_id_suffix,
+    class: 'language-flags__form',
+    return_to: back,
+    aria-label: 'content.language' | t
+  -%}
+    <ul
+      class="language-flags__list list-unstyled"
+      role="list"
+    >
+      {%- for language in localization.available_languages -%}
+        {%- assign is_current = false -%}
+        {%- if language.iso_code == localization.language.iso_code -%}
+          {%- assign is_current = true -%}
+        {%- endif -%}
+        <li class="language-flags__item">
+          <button
+            type="submit"
+            name="language_code"
+            value="{{ language.iso_code }}"
+            class="language-flags__button"
+            lang="{{ language.iso_code }}"
+            aria-label="{{ language.endonym_name | capitalize | escape }}"
+            {% if is_current %}
+              aria-current="true"
+            {% endif %}
+          >
+            <span
+              class="language-flags__flag"
+              aria-hidden="true"
+            >
+              {%- case language.iso_code -%}
+                {%- when 'bg' -%}
+                  <svg viewBox="0 0 30 20" focusable="false"><rect width="30" height="20" fill="#fff"/><rect y="6.67" width="30" height="6.67" fill="#00966E"/><rect y="13.33" width="30" height="6.67" fill="#D62612"/></svg>
+                {%- when 'en' -%}
+                  <svg viewBox="0 0 60 40" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <clipPath id="uk-s-{{ flag_id_suffix }}-{{ forloop.index }}"><path d="M0,0 v40 h60 v-40 z"/></clipPath>
+                    <clipPath id="uk-t-{{ flag_id_suffix }}-{{ forloop.index }}"><path d="M30,20 h30 v20 z v20 h-30 z h-30 v-20 z v-20 h30 z"/></clipPath>
+                    <g clip-path="url(#uk-s-{{ flag_id_suffix }}-{{ forloop.index }})">
+                      <path d="M0,0 v40 h60 v-40 z" fill="#012169"/>
+                      <path d="M0,0 L60,40 M60,0 L0,40" stroke="#fff" stroke-width="8"/>
+                      <path d="M0,0 L60,40 M60,0 L0,40" clip-path="url(#uk-t-{{ flag_id_suffix }}-{{ forloop.index }})" stroke="#C8102E" stroke-width="5"/>
+                      <path d="M30,0 v40 M0,20 h60" stroke="#fff" stroke-width="13"/>
+                      <path d="M30,0 v40 M0,20 h60" stroke="#C8102E" stroke-width="8"/>
+                    </g>
+                  </svg>
+                {%- when 'it' -%}
+                  <svg viewBox="0 0 30 20" focusable="false"><rect width="10" height="20" fill="#009246"/><rect x="10" width="10" height="20" fill="#fff"/><rect x="20" width="10" height="20" fill="#CE2B37"/></svg>
+                {%- when 'de' -%}
+                  <svg viewBox="0 0 30 20" focusable="false"><rect width="30" height="6.67" fill="#000"/><rect y="6.67" width="30" height="6.67" fill="#DD0000"/><rect y="13.33" width="30" height="6.67" fill="#FFCE00"/></svg>
+                {%- when 'ro' -%}
+                  <svg viewBox="0 0 30 20" focusable="false"><rect width="10" height="20" fill="#002B7F"/><rect x="10" width="10" height="20" fill="#FCD116"/><rect x="20" width="10" height="20" fill="#CE1126"/></svg>
+                {%- else -%}
+                  <span class="language-flags__code-fallback">{{ language.iso_code | upcase }}</span>
+              {%- endcase -%}
+            </span>
+            <span class="language-flags__code">{{ language.iso_code | upcase }}</span>
+          </button>
+        </li>
+      {%- endfor -%}
+    </ul>
+  {%- endform -%}
+</div>
+
+{% stylesheet %}
+  .language-flags {
+    --language-flags-gap: var(--gap-xs);
+    --language-flags-flag-width: 1.5rem;
+    --language-flags-flag-radius: 3px;
+
+    display: flex;
+    align-items: center;
+    min-width: 0;
+  }
+
+  .language-flags__form {
+    min-width: 0;
+  }
+
+  .language-flags__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--language-flags-gap);
+    margin: 0;
+    padding: 0;
+  }
+
+  .language-flags__button {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--gap-2xs);
+    min-height: 2rem;
+    padding-block: var(--padding-3xs);
+    padding-inline: var(--padding-xs);
+    border: 1px solid transparent;
+    border-radius: var(--language-flags-flag-radius);
+    background: transparent;
+    color: var(--color-foreground);
+    font-family: var(--menu-localization-font, inherit);
+    font-size: var(--menu-localization-font-size, var(--font-size--sm));
+    line-height: 1;
+    cursor: pointer;
+    opacity: var(--opacity-70);
+    transition: opacity var(--animation-speed) var(--animation-easing);
+  }
+
+  .language-flags__button:hover,
+  .language-flags__button[aria-current='true'] {
+    opacity: 1;
+  }
+
+  .language-flags__button[aria-current='true'] {
+    border-color: rgb(var(--color-foreground-rgb) / var(--opacity-30-60));
+  }
+
+  .language-flags__button:focus-visible {
+    outline: var(--focus-outline-width) solid currentcolor;
+    outline-offset: 2px;
+  }
+
+  .language-flags__flag {
+    display: inline-flex;
+    width: var(--language-flags-flag-width);
+    aspect-ratio: 3 / 2;
+    flex-shrink: 0;
+    overflow: hidden;
+    border-radius: var(--language-flags-flag-radius);
+    box-shadow: 0 0 0 1px rgb(var(--color-foreground-rgb) / var(--opacity-10-25));
+  }
+
+  .language-flags__flag svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .language-flags__code-fallback {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-size: 0.625rem;
+    font-weight: 600;
+  }
+
+  .language-flags__code {
+    letter-spacing: 0.04em;
+  }
+
+  .language-flags--drawer {
+    padding: var(--padding-md) var(--padding-lg);
+  }
+
+  .language-flags--drawer .language-flags__button {
+    min-height: 2.75rem;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .language-flags__button {
+      transition: none;
+    }
+  }
+{% endstylesheet %}

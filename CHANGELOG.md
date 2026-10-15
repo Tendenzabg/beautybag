@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.26 — 2026-10-15
+- Selettore lingua con bandierine (BG, EN; pronte anche IT, DE, RO) nell'header e nel menu mobile. Nuovo snippet `language-flags` (funziona anche senza JavaScript: ogni bandierina invia il modulo di localizzazione). Nuova impostazione header `language_selector_style` (`flags` predefinito, `dropdown` per il vecchio menu a tendina), con chiavi in `locales/en.default.schema.json`.
+- Il selettore compare solo se la lingua è collegata al mercato in Shopify (oggi l'inglese non lo è, quindi sul sito non si vede ancora). Non ancora caricato sul tema live. Theme Check non disponibile.
+
 ## v1.25 — 2026-10-15
 - SEO: `snippets/meta-tags.liquid` — `og:price:amount` ora con punto decimale e due decimali (es. 18.00, prima 18,00) indipendente dalla lingua; `og:image` ora con `https:` (prima `http:`).
 - Handle (URL) di collezioni e prodotti traslitterati in latino con reindirizzamenti 301 dai vecchi indirizzi in cirillico (es. `/collections/damski-parfyumi`). La sezione collezione della home ora punta a `bestselari`.

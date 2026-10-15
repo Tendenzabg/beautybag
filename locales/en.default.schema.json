@@ -572,6 +572,8 @@
     // Clothes iron appliance icon for care instructions
     "iron": "Iron",
     "landscape": "Landscape",
+    "language_dropdown": "Dropdown",
+    "language_flags": "Flags",
     "large": "Large",
     "large_arrows": "Large arrows",
     "large_chevrons": "Large chevrons",
@@ -937,6 +939,7 @@
     "items_to_show": "Items to show",
     "label": "Label",
     "language_selector": "Language selector",
+    "language_selector_style": "Language selector style",
     "large": "Large",
     "layout": "Layout",
     "layout_gap": "Layout gap",
