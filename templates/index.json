@@ -997,7 +997,7 @@
                   "type": "button",
                   "settings": {
                     "label": "Пазарувай Жена",
-                    "link": "shopify://collections/дамски-парфюми",
+                    "link": "shopify://collections/damski-parfyumi",
                     "open_in_new_tab": false,
                     "style_class": "button-custom",
                     "custom_button_background": "{{ settings.color_palette.color1 }}",
@@ -1225,7 +1225,7 @@
                   "type": "button",
                   "settings": {
                     "label": "Открий Luxury",
-                    "link": "shopify://collections/унисекс-и-лукс",
+                    "link": "shopify://collections/uniseks-i-luks",
                     "open_in_new_tab": false,
                     "style_class": "button-custom",
                     "custom_button_background": "{{ settings.color_palette.color1 }}",
