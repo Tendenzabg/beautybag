@@ -2,7 +2,8 @@
 
 ## v1.26 — 2026-10-15
 - Selettore lingua con bandierine (BG, EN; pronte anche IT, DE, RO) nell'header e nel menu mobile. Nuovo snippet `language-flags` (funziona anche senza JavaScript: ogni bandierina invia il modulo di localizzazione). Nuova impostazione header `language_selector_style` (`flags` predefinito, `dropdown` per il vecchio menu a tendina), con chiavi in `locales/en.default.schema.json`.
-- Il selettore compare solo se la lingua è collegata al mercato in Shopify (oggi l'inglese non lo è, quindi sul sito non si vede ancora). Non ancora caricato sul tema live. Theme Check non disponibile.
+- In Shopify: inglese collegato al mercato Bulgaria (`beautybag.bg/en/`). Il selettore compare solo se il negozio ha più di una lingua attiva. I testi di prodotti e collezioni in inglese non sono ancora tradotti (restano in bulgaro).
+- Caricato sul tema live spingendo il branch `claude/theme-v1.25` (collegato al tema). Primo invio con i filtri Liquid dentro i parametri del tag `form`: Shopify ha rifiutato lo snippet e per alcuni minuti l'header mostrava un errore Liquid; corretto assegnando prima le variabili. Theme Check non disponibile: verificato sul sito pubblico.
 
 ## v1.25 — 2026-10-15
 - SEO: `snippets/meta-tags.liquid` — `og:price:amount` ora con punto decimale e due decimali (es. 18.00, prima 18,00) indipendente dalla lingua; `og:image` ora con `https:` (prima `http:`).
