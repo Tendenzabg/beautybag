@@ -1113,7 +1113,7 @@
                   "type": "button",
                   "settings": {
                     "label": "Пазарувай Мъж",
-                    "link": "shopify://collections/мъжки-парфюми",
+                    "link": "shopify://collections/mazhki-parfyumi",
                     "open_in_new_tab": false,
                     "style_class": "button-custom",
                     "custom_button_background": "#6a61a7c2",
