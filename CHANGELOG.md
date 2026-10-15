@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.25 — 2026-10-15
+- SEO: `snippets/meta-tags.liquid` — `og:price:amount` ora con punto decimale e due decimali (es. 18.00, prima 18,00) indipendente dalla lingua; `og:image` ora con `https:` (prima `http:`).
+- Handle (URL) di collezioni e prodotti traslitterati in latino con reindirizzamenti 301 dai vecchi indirizzi in cirillico (es. `/collections/damski-parfyumi`). La sezione collezione della home ora punta a `bestselari`.
+- Testi delle 4 collezioni principali, titolo SEO e meta description della home impostati in Shopify (non fanno parte dei file del tema). Testi alternativi (alt) aggiunti a 5 immagini della home.
+- Salvato lo stato del tema live v1.24 con queste modifiche. Theme Check non disponibile: verificato solo sul sito pubblico.
+
 ## v1.24 — 2026-10-12
 - Corretto un errore della v1.23: l'impostazione `free_shipping_threshold` aveva troppi passi (290 con step 1; Shopify ne accetta max 101), quindi Shopify rifiutava `settings_schema.json` e lo svuotava, scomponendo la home. Ora step 5 (58 passi). Tutti i range del tema verificati.
 
