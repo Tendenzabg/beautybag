@@ -1488,7 +1488,7 @@
         }
       },
       "settings": {
-        "collection": "бестселъри",
+        "collection": "bestselari",
         "layout_type": "grid",
         "carousel_on_mobile": false,
         "max_products": 8,
