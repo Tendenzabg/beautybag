@@ -544,6 +544,61 @@ class DrawerLocalizationComponent extends Component {
   };
 }
 
+/**
+ * A custom element that wraps the flags language menu (a native details element).
+ * It closes the menu on outside click and on Escape; switching language works without it.
+ *
+ * @typedef {object} LanguageFlagsRefs
+ * @property {HTMLDetailsElement} details - The details element.
+ * @property {HTMLElement} summary - The summary element that toggles the menu.
+ *
+ * @extends {Component<LanguageFlagsRefs>}
+ */
+class LanguageFlagsComponent extends Component {
+  /** @type {AbortController | undefined} */
+  #abortController;
+
+  connectedCallback() {
+    super.connectedCallback();
+
+    this.#abortController?.abort();
+    this.#abortController = new AbortController();
+    const { signal } = this.#abortController;
+
+    document.addEventListener(
+      'click',
+      (event) => {
+        if (this.refs.details?.open && isClickedOutside(event, this)) {
+          this.refs.details.open = false;
+        }
+      },
+      { signal }
+    );
+
+    this.addEventListener(
+      'keydown',
+      (event) => {
+        if (event.key === 'Escape' && this.refs.details?.open) {
+          this.refs.details.open = false;
+          this.refs.summary?.focus();
+          event.stopPropagation();
+        }
+      },
+      { signal }
+    );
+  }
+
+  disconnectedCallback() {
+    super.disconnectedCallback();
+    this.#abortController?.abort();
+    this.#abortController = undefined;
+  }
+}
+
+if (!customElements.get('language-flags-component')) {
+  customElements.define('language-flags-component', LanguageFlagsComponent);
+}
+
 if (!customElements.get('localization-form-component')) {
   customElements.define('localization-form-component', LocalizationFormComponent);
 }

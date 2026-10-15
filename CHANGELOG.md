@@ -2,6 +2,7 @@
 
 ## v1.26 — 2026-10-15
 - Selettore lingua con bandierine (BG, EN; pronte anche IT, DE, RO) nell'header e nel menu mobile. Nuovo snippet `language-flags` (funziona anche senza JavaScript: ogni bandierina invia il modulo di localizzazione). Nuova impostazione header `language_selector_style` (`flags` predefinito, `dropdown` per il vecchio menu a tendina), con chiavi in `locales/en.default.schema.json`.
+- Il selettore con le bandierine è un menu a discesa: bottone con la bandierina della lingua attiva che apre l'elenco (bandierina + nome). Nuovo snippet `language-flag-icon`; nuovo componente `language-flags-component` in `assets/localization.js` (chiude il menu con clic fuori e Esc). Nel menu mobile l'elenco si apre dentro il pannello.
 - In Shopify: inglese collegato al mercato Bulgaria (`beautybag.bg/en/`). Il selettore compare solo se il negozio ha più di una lingua attiva. I testi di prodotti e collezioni in inglese non sono ancora tradotti (restano in bulgaro).
 - Caricato sul tema live spingendo il branch `claude/theme-v1.25` (collegato al tema). Primo invio con i filtri Liquid dentro i parametri del tag `form`: Shopify ha rifiutato lo snippet e per alcuni minuti l'header mostrava un errore Liquid; corretto assegnando prima le variabili. Theme Check non disponibile: verificato sul sito pubblico.
 
