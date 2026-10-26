@@ -1,0 +1,136 @@
+{%- doc -%}
+  Format selector of the product page ("Формат" / "Size"): shows the current size, the linked size in the
+  `other_format` metafield (70 ml <-> 30 ml, 50 ml <-> 15 ml) and, when it exists and is published, the
+  15 ml refill linked in the complementary products of the product. Sorted by size, smallest first;
+  the current format is highlighted. Hidden when there is only one format. Texts follow request.locale.
+
+  @param {object} product - The product object of the page
+
+  @example
+  {% render 'product-format-selector', product: product %}
+{%- enddoc -%}
+
+{%- liquid
+  assign bb_en = false
+  if request.locale.iso_code == 'en'
+    assign bb_en = true
+  endif
+
+  assign bb_items = ''
+  assign bb_seen = product.id | append: ','
+
+  # Current product
+  assign bb_ml = product.metafields.custom.size_ml.value | plus: 0
+  capture bb_btn
+    render 'product-format-selector-button', item: product, ml: bb_ml, active: true, en: bb_en
+  endcapture
+  assign bb_key = bb_ml | prepend: '0000' | slice: -4, 4
+  assign bb_items = bb_key | append: '§§' | append: bb_btn
+
+  # Linked format (70 <-> 30, 50 <-> 15)
+  assign bb_other = product.metafields.custom.other_format.value
+  if bb_other != blank
+    assign bb_seen = bb_seen | append: bb_other.id | append: ','
+    assign bb_ml = bb_other.metafields.custom.size_ml.value | plus: 0
+    capture bb_btn
+      render 'product-format-selector-button', item: bb_other, ml: bb_ml, active: false, en: bb_en
+    endcapture
+    assign bb_key = bb_ml | prepend: '0000' | slice: -4, 4
+    assign bb_items = bb_items | append: '‖‖' | append: bb_key | append: '§§' | append: bb_btn
+  endif
+
+  # 15 ml refills linked as complementary products (unpublished products are not returned by Liquid)
+  assign bb_comp = product.metafields['shopify--discovery--product_recommendation'].complementary_products.value
+  for bb_c in bb_comp
+    assign bb_c_id = bb_c.id | append: ','
+    if bb_seen contains bb_c_id
+      continue
+    endif
+    if bb_c.metafields.custom.is_refill.value and bb_c.metafields.custom.size_ml.value == 15
+      assign bb_seen = bb_seen | append: bb_c_id
+      assign bb_ml = 15
+      capture bb_btn
+        render 'product-format-selector-button', item: bb_c, ml: bb_ml, active: false, en: bb_en
+      endcapture
+      assign bb_items = bb_items | append: '‖‖' | append: '0015§§' | append: bb_btn
+    endif
+  endfor
+
+  assign bb_list = bb_items | split: '‖‖' | sort
+-%}
+
+{%- if bb_list.size > 1 -%}
+  <div class="bb-fmt">
+    <p class="bb-fmt__label">{% if bb_en %}Size{% else %}Формат{% endif %}</p>
+    <div class="bb-fmt__row">
+      {%- for bb_entry in bb_list -%}
+        {{- bb_entry | split: '§§' | last -}}
+      {%- endfor -%}
+    </div>
+  </div>
+{%- endif -%}
+
+{% stylesheet %}
+  .bb-fmt {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 4px 0;
+  }
+
+  .bb-fmt__label {
+    font-size: 0.8125rem;
+    opacity: 0.75;
+    margin: 0;
+  }
+
+  .bb-fmt__row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .bb-fmt__btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 120px;
+    padding: 10px 18px;
+    border: 1px solid var(--color-primary-button-background);
+    border-radius: var(--style-border-radius-buttons-primary, 14px);
+    color: var(--color-foreground);
+    background: transparent;
+    text-decoration: none;
+    line-height: 1.3;
+    text-align: center;
+  }
+
+  .bb-fmt__btn:hover {
+    background: rgb(var(--color-foreground-rgb) / 0.06);
+  }
+
+  .bb-fmt__btn--active {
+    background: var(--color-primary-button-background);
+    color: var(--color-primary-button-text);
+    pointer-events: none;
+  }
+
+  .bb-fmt__ml {
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
+
+  .bb-fmt__sub {
+    font-size: 0.8125rem;
+    opacity: 0.85;
+  }
+
+  @media (max-width: 749px) {
+    .bb-fmt__btn {
+      min-width: 0;
+      flex: 1 1 0;
+      padding: 10px 12px;
+    }
+  }
+{% endstylesheet %}

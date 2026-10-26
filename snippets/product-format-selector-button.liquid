@@ -1,0 +1,21 @@
+{%- doc -%}
+  One button of the product page format selector: the current format (not a link) or a link to another one.
+
+  @param {object} item - Product of the format
+  @param {number} ml - Size in ml
+  @param {boolean} active - True for the product of the page
+  @param {boolean} en - True when the storefront language is English
+{%- enddoc -%}
+
+{%- liquid
+  assign bb_refill = item.metafields.custom.is_refill.value
+-%}
+{%- capture bb_inner -%}
+  <span class="bb-fmt__ml">{{ ml }} {% if en %}ml{% if bb_refill %} refill{% endif %}{% else %}мл{% if bb_refill %} зареждане{% endif %}{% endif %}</span>
+  <span class="bb-fmt__sub">{{ item.price | money }}</span>
+{%- endcapture -%}
+{%- if active -%}
+  <span class="bb-fmt__btn bb-fmt__btn--active" aria-current="page">{{ bb_inner }}</span>
+{%- else -%}
+  <a class="bb-fmt__btn" href="{{ item.url }}">{{ bb_inner }}</a>
+{%- endif -%}
