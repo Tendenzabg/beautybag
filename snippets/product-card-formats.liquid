@@ -53,6 +53,43 @@
     endif
   endif
 
+  # Second level: format linked to the linked one (15 ml -> 70 ml -> 30 ml)
+  if bb_other != blank
+    assign bb_other2 = bb_other.metafields.custom.other_format.value
+    assign bb_o2_id = bb_other2.id | append: ','
+    assign bb_o2_new = false
+    if bb_other2 != blank
+      unless bb_ids contains bb_o2_id
+        assign bb_o2_new = true
+      endunless
+    endif
+    if bb_o2_new
+      assign bb_ids = bb_ids | append: bb_o2_id
+      assign bb_ml = bb_other2.metafields.custom.size_ml.value | plus: 0
+      assign bb_key = bb_ml | prepend: '0000' | slice: -4, 4
+      assign bb_do_check = false
+      if bb_other2.available and bb_checked_done == false
+        assign bb_do_check = true
+        assign bb_checked_done = true
+      endif
+      capture bb_html
+        render 'product-card-format-pill', item: bb_other2, ml: bb_ml, checked: bb_do_check
+      endcapture
+      assign bb_keyed = bb_keyed | append: '‖‖' | append: bb_key | append: '§§' | append: bb_html
+      if bb_other2.available
+        assign bb_can_buy = true
+      endif
+    endif
+    assign bb_comp_other = bb_other.metafields['shopify--discovery--product_recommendation'].complementary_products.value
+    if bb_comp_other != blank
+      if bb_comp != blank
+        assign bb_comp = bb_comp | concat: bb_comp_other
+      else
+        assign bb_comp = bb_comp_other
+      endif
+    endif
+  endif
+
   # 3. 15 ml refill (published products only)
   for bb_c in bb_comp
     assign bb_c_id = bb_c.id | append: ','

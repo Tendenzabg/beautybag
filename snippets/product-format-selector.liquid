@@ -39,8 +39,37 @@
     assign bb_items = bb_items | append: '‖‖' | append: bb_key | append: '§§' | append: bb_btn
   endif
 
-  # 15 ml refills linked as complementary products (unpublished products are not returned by Liquid)
+  # Second level: the format linked to the linked one (15 ml page -> 70 ml -> 30 ml)
   assign bb_comp = product.metafields['shopify--discovery--product_recommendation'].complementary_products.value
+  if bb_other != blank
+    assign bb_other2 = bb_other.metafields.custom.other_format.value
+    assign bb_o2_id = bb_other2.id | append: ','
+    assign bb_o2_new = false
+    if bb_other2 != blank
+      unless bb_seen contains bb_o2_id
+        assign bb_o2_new = true
+      endunless
+    endif
+    if bb_o2_new
+      assign bb_seen = bb_seen | append: bb_other2.id | append: ','
+      assign bb_ml = bb_other2.metafields.custom.size_ml.value | plus: 0
+      capture bb_btn
+        render 'product-format-selector-button', item: bb_other2, ml: bb_ml, active: false, en: bb_en
+      endcapture
+      assign bb_key = bb_ml | prepend: '0000' | slice: -4, 4
+      assign bb_items = bb_items | append: '‖‖' | append: bb_key | append: '§§' | append: bb_btn
+    endif
+    assign bb_comp_other = bb_other.metafields['shopify--discovery--product_recommendation'].complementary_products.value
+    if bb_comp_other != blank
+      if bb_comp != blank
+        assign bb_comp = bb_comp | concat: bb_comp_other
+      else
+        assign bb_comp = bb_comp_other
+      endif
+    endif
+  endif
+
+  # 15 ml refills linked as complementary products (unpublished products are not returned by Liquid)
   for bb_c in bb_comp
     assign bb_c_id = bb_c.id | append: ','
     if bb_seen contains bb_c_id

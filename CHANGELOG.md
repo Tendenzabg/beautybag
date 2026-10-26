@@ -1,7 +1,7 @@
 # Changelog
 
 ## v1.28 — 2026-10-26
-- Scheda prodotto: il selettore «Формат» ora mostra anche la ricarica 15 ml nelle schede 70 ml e 30 ml, quando esiste ed è pubblicata (letta dai «Допълващи продукти» del prodotto; i prodotti in bozza non compaiono). Formati ordinati dal più piccolo, il corrente evidenziato. Stessa cosa nel pannello «Купи сега» delle card in collezione (nuovo snippet `product-card-format-pill`, `product-card-formats` riscritto). Il codice della scheda è passato dal blocco `bb_format` di `templates/product.json` ai nuovi snippet `product-format-selector` e `product-format-selector-button`.
+- Scheda prodotto: il selettore «Формат» ora mostra anche la ricarica 15 ml nelle schede 70 ml e 30 ml, quando esiste ed è pubblicata (letta dai «Допълващи продукти» del prodotto; i prodotti in bozza non compaiono). Formati ordinati dal più piccolo, il corrente evidenziato. Stessa cosa nel pannello «Купи сега» delle card in collezione (nuovo snippet `product-card-format-pill`, `product-card-formats` riscritto). Fix: dalla scheda 15 ml restano visibili anche 30 e 70 ml (il formato collegato viene seguito su due livelli). Il codice della scheda è passato dal blocco `bb_format` di `templates/product.json` ai nuovi snippet `product-format-selector` e `product-format-selector-button`.
 
 ## v1.27 — 2026-10-15
 - Lingue: tutte le scritte rimaste in inglese nella versione bulgara ora sono in bulgaro (pagina 404, carrello «Количка», «Може да ви хареса и», «Колекции», pulsante del modulo contatti, «Абонирай се» nel footer, pagina password, «100% Произведено в Италия», «Унисекс и лукс колекция»). I link delle tre collezioni nella home ora puntano agli handle latini.
