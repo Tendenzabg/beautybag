@@ -14,35 +14,69 @@
 
 {%- liquid
   assign bb_layout = layout | default: 'overlay'
-  assign bb_other = product.metafields.custom.other_format.value
   assign bb_cur_variant = product.selected_or_first_available_variant
   assign bb_cur_ml = product.metafields.custom.size_ml.value | plus: 0
-  assign bb_cur_refill = product.metafields.custom.is_refill.value
+  assign bb_can_buy = product.available
 
-  assign bb_other_available = false
+  assign bb_other = product.metafields.custom.other_format.value
+  assign bb_comp = product.metafields['shopify--discovery--product_recommendation'].complementary_products.value
+-%}
+
+{%- liquid
+  assign bb_keyed = ''
+  assign bb_ids = product.id | append: ','
+
+  # 1. current product
+  assign bb_key = bb_cur_ml | prepend: '0000' | slice: -4, 4
+  capture bb_html
+    render 'product-card-format-pill', item: product, ml: bb_cur_ml, checked: product.available
+  endcapture
+  assign bb_keyed = bb_key | append: '§§' | append: bb_html
+  assign bb_checked_done = product.available
+
+  # 2. linked format
   if bb_other != blank
-    assign bb_other_variant = bb_other.selected_or_first_available_variant
-    assign bb_other_ml = bb_other.metafields.custom.size_ml.value | plus: 0
-    assign bb_other_refill = bb_other.metafields.custom.is_refill.value
+    assign bb_ids = bb_ids | append: bb_other.id | append: ','
+    assign bb_ml = bb_other.metafields.custom.size_ml.value | plus: 0
+    assign bb_key = bb_ml | prepend: '0000' | slice: -4, 4
+    assign bb_do_check = false
+    if bb_other.available and bb_checked_done == false
+      assign bb_do_check = true
+      assign bb_checked_done = true
+    endif
+    capture bb_html
+      render 'product-card-format-pill', item: bb_other, ml: bb_ml, checked: bb_do_check
+    endcapture
+    assign bb_keyed = bb_keyed | append: '‖‖' | append: bb_key | append: '§§' | append: bb_html
     if bb_other.available
-      assign bb_other_available = true
+      assign bb_can_buy = true
     endif
   endif
 
-  assign bb_can_buy = false
-  if product.available or bb_other_available
-    assign bb_can_buy = true
-  endif
+  # 3. 15 ml refill (published products only)
+  for bb_c in bb_comp
+    assign bb_c_id = bb_c.id | append: ','
+    if bb_ids contains bb_c_id
+      continue
+    endif
+    if bb_c.metafields.custom.is_refill.value and bb_c.metafields.custom.size_ml.value == 15
+      assign bb_ids = bb_ids | append: bb_c_id
+      assign bb_do_check = false
+      if bb_c.available and bb_checked_done == false
+        assign bb_do_check = true
+        assign bb_checked_done = true
+      endif
+      capture bb_html
+        render 'product-card-format-pill', item: bb_c, ml: 15, checked: bb_do_check
+      endcapture
+      assign bb_keyed = bb_keyed | append: '‖‖0015§§' | append: bb_html
+      if bb_c.available
+        assign bb_can_buy = true
+      endif
+    endif
+  endfor
 
-  # Order the pills by size, smallest first; the pill matching the card (if available) is preselected.
-  assign bb_other_first = false
-  if bb_other != blank and bb_other_ml < bb_cur_ml
-    assign bb_other_first = true
-  endif
-  assign bb_check_current = false
-  if product.available
-    assign bb_check_current = true
-  endif
+  assign bb_sorted = bb_keyed | split: '‖‖' | sort
 -%}
 
 {%- if bb_can_buy and product.id != blank -%}
@@ -55,57 +89,12 @@
       <input type="hidden" name="return_to" value="/checkout">
       <input type="hidden" name="quantity" value="1">
 
-      {%- if bb_other != blank -%}
+      {%- if bb_sorted.size > 1 -%}
         <fieldset class="bb-cardbuy__sizes">
           <legend class="visually-hidden">{{ 'content.product_card_format' | t }}</legend>
-          {%- if bb_other_first -%}
-            <label class="bb-cardbuy__size">
-              <input
-                type="radio"
-                name="id"
-                value="{{ bb_other_variant.id }}"
-                {% if bb_other_available and bb_check_current == false %}
-                  checked
-                {% endif %}
-                {% unless bb_other_available %}
-                  disabled
-                {% endunless %}
-              >
-              <span>{{ 'content.product_card_size_ml' | t: size: bb_other_ml }}{% if bb_other_refill %} ↻{% endif %}</span>
-            </label>
-          {%- endif -%}
-
-          <label class="bb-cardbuy__size">
-            <input
-              type="radio"
-              name="id"
-              value="{{ bb_cur_variant.id }}"
-              {% if bb_check_current %}
-                checked
-              {% endif %}
-              {% unless product.available %}
-                disabled
-              {% endunless %}
-            >
-            <span>{{ 'content.product_card_size_ml' | t: size: bb_cur_ml }}{% if bb_cur_refill %} ↻{% endif %}</span>
-          </label>
-
-          {%- unless bb_other_first -%}
-            <label class="bb-cardbuy__size">
-              <input
-                type="radio"
-                name="id"
-                value="{{ bb_other_variant.id }}"
-                {% if bb_other_available and bb_check_current == false %}
-                  checked
-                {% endif %}
-                {% unless bb_other_available %}
-                  disabled
-                {% endunless %}
-              >
-              <span>{{ 'content.product_card_size_ml' | t: size: bb_other_ml }}{% if bb_other_refill %} ↻{% endif %}</span>
-            </label>
-          {%- endunless -%}
+          {%- for bb_entry in bb_sorted -%}
+            {{- bb_entry | split: '§§' | last -}}
+          {%- endfor -%}
         </fieldset>
       {%- else -%}
         <input type="hidden" name="id" value="{{ bb_cur_variant.id }}">

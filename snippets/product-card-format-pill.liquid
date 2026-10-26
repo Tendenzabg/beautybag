@@ -1,0 +1,22 @@
+{%- doc -%}
+  One size pill (radio) of the product card quick-buy panel.
+
+  @param {object} item - Product of the format
+  @param {number} ml - Size in ml
+  @param {boolean} checked - Preselect this pill
+{%- enddoc -%}
+
+<label class="bb-cardbuy__size">
+  <input
+    type="radio"
+    name="id"
+    value="{{ item.selected_or_first_available_variant.id }}"
+    {% if checked %}
+      checked
+    {% endif %}
+    {% unless item.available %}
+      disabled
+    {% endunless %}
+  >
+  <span>{{ 'content.product_card_size_ml' | t: size: ml }}{% if item.metafields.custom.is_refill.value %} ↻{% endif %}</span>
+</label>
