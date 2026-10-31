@@ -144,11 +144,20 @@
                 "wrap": "pretty"
               },
               "blocks": {}
+            },
+            "payment": {
+              "type": "payment-icons",
+              "settings": {
+                "horizontal_alignment": "flex-start",
+                "gap": 8
+              },
+              "blocks": {}
             }
           },
           "block_order": [
             "text_h",
-            "text_l"
+            "text_l",
+            "payment"
           ]
         },
         "newsletter": {
@@ -267,14 +276,6 @@
             "text_color": "",
             "font_size": "0.75rem",
             "case": "none"
-          },
-          "blocks": {}
-        },
-        "payment": {
-          "type": "payment-icons",
-          "settings": {
-            "horizontal_alignment": "flex-start",
-            "gap": 10
           },
           "blocks": {}
         }
