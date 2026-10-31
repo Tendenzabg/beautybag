@@ -1,5 +1,8 @@
 # Changelog
 
+## v1.29 — 2026-10-31
+- Nuovo footer in stile Soft Violet: fondo lilla (color2), 5 blocchi (brand con logo/slogan/contatti, menu «Магазин», menu «Помощ», «Доставка и плащане», bollettino a tutta larghezza) + barra inferiore con copyright, policy e icone di pagamento. Menu Shopify creati: `footer-shop`, `footer-help`. Social rimossi finché non ci sono gli URL reali.
+
 ## v1.24 — 2026-10-12
 - Corretto un errore della v1.23: l'impostazione `free_shipping_threshold` aveva troppi passi (290 con step 1; Shopify ne accetta max 101), quindi Shopify rifiutava `settings_schema.json` e lo svuotava, scomponendo la home. Ora step 5 (58 passi). Tutti i range del tema verificati.
 
