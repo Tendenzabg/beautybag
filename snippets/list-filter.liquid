@@ -232,7 +232,7 @@
                 {% if is_image %}
                   <fieldset
                     class="variant-option variant-option--buttons variant-option--images"
-                    aria-label="{{ value.label }}"
+                    aria-label="{% render 'bb-tr', text: value.label %}"
                     on:keydown="#facet-inputs-component-{{ filter.param_name | escape | replace: '.', '-' }}/handleKeyDown"
                   >
                     <div class="facets__image-wrapper">
@@ -256,7 +256,7 @@
                       type="checkbox"
                       name="{{ value.param_name }}"
                       value="{{ value.value }}"
-                      aria-label="{{ value.label }}"
+                      aria-label="{% render 'bb-tr', text: value.label %}"
                       id="{{ input_id }}"
                       {% if value.active %}
                         checked
@@ -271,13 +271,13 @@
                       for="{{ input_id }}"
                       tabindex="-1"
                     >
-                      {{- value.label }}
+                      {% render 'bb-tr', text: value.label %}
                     </label>
                   </fieldset>
                 {% elsif is_swatch %}
                   <fieldset
                     class="variant-option variant-option--buttons variant-option--swatches {% if is_disabled %}variant-option--swatches-disabled{% endif %}"
-                    aria-label="{{ value.label }}"
+                    aria-label="{% render 'bb-tr', text: value.label %}"
                     on:keydown="#facet-inputs-component-{{ filter.param_name | escape | replace: '.', '-' }}/handleKeyDown"
                   >
                     <label
@@ -294,7 +294,7 @@
                           type="checkbox"
                           name="{{ value.param_name }}"
                           value="{{ value.value }}"
-                          aria-label="{{ value.label }}"
+                          aria-label="{% render 'bb-tr', text: value.label %}"
                           id="{{ input_id }}"
                           {% if value.active %}
                             checked
@@ -322,7 +322,7 @@
                         for="{{ input_id }}"
                         tabindex="-1"
                       >
-                        {{- value.label }}
+                        {% render 'bb-tr', text: value.label %}
                       </label>
                     </label>
                   </fieldset>
@@ -338,7 +338,7 @@
                         value="{{ value.value }}"
                         id="{{ input_id }}"
                         class="facets__pill-input"
-                        data-label="{{ value.label }}"
+                        data-label="{% render 'bb-tr', text: value.label %}"
                         {% if value.active %}
                           checked
                         {% endif %}
@@ -353,7 +353,7 @@
                         for="{{ input_id }}"
                         tabindex="0"
                       >
-                        {{- value.label }}
+                        {% render 'bb-tr', text: value.label %}
                         {% if is_disabled %}
                           <svg
                             aria-hidden="true"

@@ -66,9 +66,9 @@
           {% endif %}
 
           {% if filter.type == 'boolean' or show_filter_label %}
-            {{ filter.label | escape }}: {{ value.label | escape }}
+            {{ filter.label | escape }}: {% capture bb_vl %}{% render 'bb-tr', text: value.label %}{% endcapture %}{{ bb_vl | escape }}
           {% else %}
-            {{ value.label | escape }}
+            {% capture bb_vl %}{% render 'bb-tr', text: value.label %}{% endcapture %}{{ bb_vl | escape }}
           {% endif %}
 
           <span class="svg-wrapper svg-wrapper--smaller">

@@ -104,3 +104,9 @@
 - Homepage (annunci, hero, 4 punti di fiducia, 3 collezioni, bestseller, storia, FAQ) e scheda prodotto (sottotitolo da metafield, trust, accordion con disclaimer).
 - Logo BeautyBag.
 - Aggiunti `docs/` con design system, catalogo, logistica e strategia.
+
+## v1.32 — Traduzione EN del tema (su base v1.31)
+- Nuovo snippet `snippets/bb-tr.liquid`: dizionario BG→EN (note olfattive, genere, tipo) usato solo con locale `en`.
+- Filtri collezione (`list-filter`, `filter-remove-buttons`) tradotti.
+- `templates/product.json`: etichette note, disclaimer marchi e pulsante scheda tecnica in EN.
+- Theme Check non disponibile: non eseguito.

@@ -722,7 +722,7 @@
                     "t": {
                       "type": "custom-liquid",
                       "settings": {
-                        "custom_liquid": "{%- assign bb_top = product.metafields.custom.top_notes.value -%}{%- assign bb_heart = product.metafields.custom.heart_notes.value -%}{%- assign bb_base = product.metafields.custom.base_notes.value -%}{%- if bb_top != blank or bb_heart != blank or bb_base != blank -%}<ul style='list-style:none;padding:0;margin:0;display:grid;gap:.5rem'>{%- if bb_top != blank -%}<li><strong>Върхови нотки:</strong> {{ bb_top | join: ', ' }}</li>{%- endif -%}{%- if bb_heart != blank -%}<li><strong>Сърдечни нотки:</strong> {{ bb_heart | join: ', ' }}</li>{%- endif -%}{%- if bb_base != blank -%}<li><strong>Базови нотки:</strong> {{ bb_base | join: ', ' }}</li>{%- endif -%}</ul>{%- endif -%}"
+                        "custom_liquid": "{%- assign bb_top = product.metafields.custom.top_notes.value -%}{%- assign bb_heart = product.metafields.custom.heart_notes.value -%}{%- assign bb_base = product.metafields.custom.base_notes.value -%}{%- if bb_top != blank or bb_heart != blank or bb_base != blank -%}<ul style='list-style:none;padding:0;margin:0;display:grid;gap:.5rem'>{%- if bb_top != blank -%}<li><strong>{%- if request.locale.iso_code == 'en' -%}Top notes:{%- else -%}Върхови нотки:{%- endif -%}</strong> {%- capture bb_top_t -%}{%- for n in bb_top -%}{%- render 'bb-tr', text: n -%}{%- unless forloop.last -%}{{ ', ' }}{%- endunless -%}{%- endfor -%}{%- endcapture -%}{{ bb_top_t }}</li>{%- endif -%}{%- if bb_heart != blank -%}<li><strong>{%- if request.locale.iso_code == 'en' -%}Heart notes:{%- else -%}Сърдечни нотки:{%- endif -%}</strong> {%- capture bb_heart_t -%}{%- for n in bb_heart -%}{%- render 'bb-tr', text: n -%}{%- unless forloop.last -%}{{ ', ' }}{%- endunless -%}{%- endfor -%}{%- endcapture -%}{{ bb_heart_t }}</li>{%- endif -%}{%- if bb_base != blank -%}<li><strong>{%- if request.locale.iso_code == 'en' -%}Base notes:{%- else -%}Базови нотки:{%- endif -%}</strong> {%- capture bb_base_t -%}{%- for n in bb_base -%}{%- render 'bb-tr', text: n -%}{%- unless forloop.last -%}{{ ', ' }}{%- endunless -%}{%- endfor -%}{%- endcapture -%}{{ bb_base_t }}</li>{%- endif -%}</ul>{%- endif -%}"
                       },
                       "blocks": {}
                     }
@@ -821,7 +821,7 @@
                     "t": {
                       "type": "custom-liquid",
                       "settings": {
-                        "custom_liquid": "{%- assign bb_ob = product.metafields.custom.original_brand.value -%}{%- assign bb_om = product.metafields.custom.original_model.value -%}<p>{%- if bb_ob != blank or bb_om != blank -%}Търговските марки и имена принадлежат на техните законни собственици. Те са споменати единствено с цел да посочат олфактивното вдъхновение и ароматната пирамида на продукта съгласно Директива 2006/114/ЕО.{%- else -%}Всички споменати търговски марки принадлежат на техните законни собственици и се използват единствено с информационна цел съгласно Директива 2006/114/ЕО.{%- endif -%} BeautyBag няма пряка търговска връзка с посочените марки.</p>"
+                        "custom_liquid": "{%- assign bb_ob = product.metafields.custom.original_brand.value -%}{%- assign bb_om = product.metafields.custom.original_model.value -%}<p>{%- if bb_ob != blank or bb_om != blank -%}{%- if request.locale.iso_code == 'en' -%}Trademarks and names belong to their lawful owners. They are mentioned solely to indicate the olfactory inspiration and fragrance pyramid of the product in accordance with Directive 2006/114/EC.{%- else -%}Търговските марки и имена принадлежат на техните законни собственици. Те са споменати единствено с цел да посочат олфактивното вдъхновение и ароматната пирамида на продукта съгласно Директива 2006/114/ЕО.{%- endif -%}{%- else -%}{%- if request.locale.iso_code == 'en' -%}All trademarks mentioned belong to their lawful owners and are used for informational purposes only in accordance with Directive 2006/114/EC.{%- else -%}Всички споменати търговски марки принадлежат на техните законни собственици и се използват единствено с информационна цел съгласно Директива 2006/114/ЕО.{%- endif -%}{%- endif -%}{%- if request.locale.iso_code == 'en' -%}BeautyBag has no direct commercial relationship with the brands mentioned.{%- else -%} BeautyBag няма пряка търговска връзка с посочените марки.{%- endif -%}</p>"
                       },
                       "blocks": {}
                     }
@@ -841,7 +841,7 @@
             "bb_techsheet": {
               "type": "custom-liquid",
               "settings": {
-                "custom_liquid": "{%- assign bb_ts = product.metafields.custom.tech_sheet.value -%}{%- if bb_ts != blank -%}<p><a href=\"{{ bb_ts.url }}\" target=\"_blank\" rel=\"noopener\" class=\"button button-secondary\">Изтегли техническата карта (PDF)</a></p>{%- endif -%}"
+                "custom_liquid": "{%- assign bb_ts = product.metafields.custom.tech_sheet.value -%}{%- if bb_ts != blank -%}<p><a href=\"{{ bb_ts.url }}\" target=\"_blank\" rel=\"noopener\" class=\"button button-secondary\">{%- if request.locale.iso_code == 'en' -%}Download the technical sheet (PDF){%- else -%}Изтегли техническата карта (PDF){%- endif -%}</a></p>{%- endif -%}"
               },
               "blocks": {}
             }
