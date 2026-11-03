@@ -1,11 +1,19 @@
 # Changelog
 
+## v1.31 — 2026-11-03
+- Footer Soft Violet (v1.29) applicato sopra il tema live salvato (v1.30): conservate le modifiche manuali dell'editor (blocchi app, collezione).
+- Social del footer (blocco `social`): Facebook «Beauty Bag Парфюми», Instagram @beautybag.bg, TikTok @beautybag.bg — gli URL reali impostati a mano sul footer live. YouTube e X restano vuoti (nel live erano solo link generici).
+- Theme Check non disponibile: nessun controllo automatico eseguito.
+
 ## v1.30 — 2026-11-03
 - Salvataggio del tema LIVE (MAIN) «beautybag/claude/theme-v-cart-no-persist» con le modifiche fatte a mano nell'editor tra il 31/10 e il 3/11 (ultimo commit Shopify bc0462e).
 - `config/settings_data.json`: blocchi app attivi nel tema — Google & YouTube (widget in basso a sinistra), Forms, Microsoft Clarity — e Pigeon Express «shipping-widget-script» (presente ma disattivato).
 - `templates/collection.json`: modifiche alla pagina collezione fatte nell'editor. `sections/footer-group.json`: piccoli ritocchi manuali al footer.
 - Questo snapshot parte dalla linea del tema live (v1.24 + cart no-persist): NON include il lavoro v1.25–v1.29 (footer Soft Violet, branch `claude/theme-v1.29`), che resta separato.
 - Theme Check non disponibile: nessun controllo automatico eseguito.
+
+## v1.29 — 2026-10-31
+- Nuovo footer in stile Soft Violet: fondo lilla (color2), 5 blocchi (brand con logo/slogan/contatti, menu «Магазин», menu «Помощ», «Доставка и плащане», bollettino a tutta larghezza) + barra inferiore con copyright, policy e icone di pagamento. Menu Shopify creati: `footer-shop`, `footer-help`. Social rimossi finché non ci sono gli URL reali.
 
 ## v1.24 — 2026-10-12
 - Corretto un errore della v1.23: l'impostazione `free_shipping_threshold` aveva troppi passi (290 con step 1; Shopify ne accetta max 101), quindi Shopify rifiutava `settings_schema.json` e lo svuotava, scomponendo la home. Ora step 5 (58 passi). Tutti i range del tema verificati.
