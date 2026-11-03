@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.36 — 2026-11-04
+- Footer ripristinato: `sections/footer-group.json` non veniva caricato da Shopify (FILE_VALIDATION_ERROR: `pixel_height` del logo = 44 non è un multiplo dello step 8). Impostato 48 → il file viene accettato e il footer torna visibile.
+- Theme Check non disponibile: nessun controllo automatico eseguito.
+
 ## v1.31 — 2026-11-03
 - Footer Soft Violet (v1.29) applicato sopra il tema live salvato (v1.30): conservate le modifiche manuali dell'editor (blocchi app, collezione).
 - Social del footer (blocco `social`): Facebook «Beauty Bag Парфюми», Instagram @beautybag.bg, TikTok @beautybag.bg — gli URL reali impostati a mano sul footer live. YouTube e X restano vuoti (nel live erano solo link generici).
