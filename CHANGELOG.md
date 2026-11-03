@@ -116,3 +116,7 @@
 - `templates/product.json`: blocco «Формат» (ml/refill) e testo intro (concentrazione, volume, benefici) in EN.
 - Traduzioni contenuti tema (home, FAQ, annunci, trust, accordion) registrate in Shopify per il tema live (50 chiavi, translationsRegister).
 - Theme Check non disponibile: non eseguito.
+
+## v1.34 — Bandierine BG/UK nel selettore lingua (su v1.33)
+- Ripristinati da v1.26: `snippets/language-flags.liquid`, `snippets/language-flag-icon.liquid`, componente `LanguageFlagsComponent` in `assets/localization.js`, impostazione `language_selector_style` (default «flags») in `sections/header.liquid`, menu mobile in `snippets/header-drawer.liquid`, voci in `locales/en.default.schema.json`.
+- Theme Check non disponibile: non eseguito.

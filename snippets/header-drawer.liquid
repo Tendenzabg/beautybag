@@ -617,7 +617,15 @@
             assign color_shadow = '--color-shadow: rgb(var(--color-foreground-rgb) / var(--opacity-10-25));'
             assign form_style = localization_font | append: color_shadow
           %}
-          {% if show_language and show_country == false %}
+          {% if show_language and show_country == false and section.settings.language_selector_style == 'flags' %}
+            <div class="menu-drawer__localization color-custom-popover">
+              {% render 'language-flags',
+                localization_style: 'drawer',
+                form_style: form_style,
+                form_id: block.id
+              %}
+            </div>
+          {% elsif show_language and show_country == false %}
             <div class="menu-drawer__localization color-custom-popover">
               {% render 'localization-form',
                 show_country: show_country,
