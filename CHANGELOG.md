@@ -1,5 +1,12 @@
 # Changelog
 
+## v1.30 — 2026-11-03
+- Salvataggio del tema LIVE (MAIN) «beautybag/claude/theme-v-cart-no-persist» con le modifiche fatte a mano nell'editor tra il 31/10 e il 3/11 (ultimo commit Shopify bc0462e).
+- `config/settings_data.json`: blocchi app attivi nel tema — Google & YouTube (widget in basso a sinistra), Forms, Microsoft Clarity — e Pigeon Express «shipping-widget-script» (presente ma disattivato).
+- `templates/collection.json`: modifiche alla pagina collezione fatte nell'editor. `sections/footer-group.json`: piccoli ritocchi manuali al footer.
+- Questo snapshot parte dalla linea del tema live (v1.24 + cart no-persist): NON include il lavoro v1.25–v1.29 (footer Soft Violet, branch `claude/theme-v1.29`), che resta separato.
+- Theme Check non disponibile: nessun controllo automatico eseguito.
+
 ## v1.24 — 2026-10-12
 - Corretto un errore della v1.23: l'impostazione `free_shipping_threshold` aveva troppi passi (290 con step 1; Shopify ne accetta max 101), quindi Shopify rifiutava `settings_schema.json` e lo svuotava, scomponendo la home. Ora step 5 (58 passi). Tutti i range del tema verificati.
 
