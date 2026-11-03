@@ -110,3 +110,9 @@
 - Filtri collezione (`list-filter`, `filter-remove-buttons`) tradotti.
 - `templates/product.json`: etichette note, disclaimer marchi e pulsante scheda tecnica in EN.
 - Theme Check non disponibile: non eseguito.
+
+## v1.33 — Traduzione EN completa (su v1.32)
+- `list-filter.liquid`: etichette valori filtro tradotte anche nel checkbox e nel riepilogo filtro attivo.
+- `templates/product.json`: blocco «Формат» (ml/refill) e testo intro (concentrazione, volume, benefici) in EN.
+- Traduzioni contenuti tema (home, FAQ, annunci, trust, accordion) registrate in Shopify per il tema live (50 chiavi, translationsRegister).
+- Theme Check non disponibile: non eseguito.

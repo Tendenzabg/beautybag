@@ -94,7 +94,7 @@
             >
               {%- liquid
                 if filter_style == 'horizontal' and active_value_count == 1
-                  echo filter.active_values[0].label
+                  render 'bb-tr', text: filter.active_values[0].label
                 elsif active_value_count > 0
                   echo active_value_count
                 endif
@@ -368,10 +368,11 @@
                       </label>
                     </div>
                   {% else %}
+                    {%- capture bb_vlabel -%}{% render 'bb-tr', text: value.label %}{%- endcapture -%}
                     {% render 'checkbox',
                       name: value.param_name,
                       value: value.value,
-                      label: value.label,
+                      label: bb_vlabel,
                       checked: value.active,
                       id: input_id,
                       disabled: is_disabled,
