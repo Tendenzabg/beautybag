@@ -1,5 +1,12 @@
 # Changelog
 
+## v1.37 — 2026-11-09
+- Salvataggio del tema LIVE (MAIN) «beautybag/claude/theme-v1.35» (ID 210427281753, ultimo aggiornamento Shopify 09/11 16:08 UTC, commit 085e6a6) con le modifiche fatte a mano nell'editor l'8 e il 9/11.
+- `layout/theme.liquid`: aggiunto lo script Microsoft Clarity nell'`<head>` (dopo `content_for_header`).
+- `sections/footer-group.json`: testo «Доставка с Еконт, Спиди и Пигеон» (Pigeon aggiunto ai corrieri); Shopify ha riformattato il file aggiungendo le chiavi vuote dei social (threads, linkedin, bluesky, snapchat, pinterest, tumblr, vimeo, custom) e `link`/`font` ai blocchi.
+- Include il fix footer della v1.36 (`pixel_height` logo 48).
+- Theme Check non disponibile: nessun controllo automatico eseguito. Verificato solo che l'ID/nome del tema MAIN e l'orario di aggiornamento coincidano con l'ultimo commit Shopify; nessun confronto file per file con il tema vivo.
+
 ## v1.36 — 2026-11-04
 - Footer ripristinato: `sections/footer-group.json` non veniva caricato da Shopify (FILE_VALIDATION_ERROR: `pixel_height` del logo = 44 non è un multiplo dello step 8). Impostato 48 → il file viene accettato e il footer torna visibile.
 - Theme Check non disponibile: nessun controllo automatico eseguito.
