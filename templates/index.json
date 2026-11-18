@@ -89,7 +89,7 @@
               "type": "button",
               "settings": {
                 "label": "Открий своя аромат",
-                "link": "shopify://collections/all",
+                "link": "shopify://collections/aromati",
                 "open_in_new_tab": false,
                 "style_class": "button-custom",
                 "custom_button_background": "#6a61a730",
