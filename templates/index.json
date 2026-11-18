@@ -41,7 +41,7 @@
               "type": "button",
               "settings": {
                 "label": "Разгледай колекцията",
-                "link": "shopify://collections/all",
+                "link": "shopify://collections/aromati",
                 "open_in_new_tab": false,
                 "style_class": "button-custom",
                 "custom_button_background": "#6a61a724",
@@ -1582,7 +1582,7 @@
         "video_position": "cover",
         "background_image_position": "cover",
         "toggle_overlay": true,
-        "overlay_color": "#C1348BCC",
+        "overlay_color": "#c1348bcc",
         "overlay_style": "gradient",
         "gradient_direction": "to bottom",
         "border": "none",
