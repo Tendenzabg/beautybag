@@ -1,5 +1,12 @@
 # Changelog
 
+## v1.38 — 2026-11-18
+- Nuovo template prodotto `templates/product.cosmetics.json` (suffisso `cosmetics`) per creme, prodotti viso e capelli: copia di `product.json` con queste differenze. Il blocco «30% Чиста френска есенция» diventa «Грижа с активни съставки / Професионални формули за лице и коса» (icona `leaf`); la descrizione introduttiva diventa «Италианска козметика от Chogan Group S.p.A.» (BG/EN nel Liquid, niente «Италиански парфюм»); tolti dall'accordion la riga «Олфактивна пирамида» e la «Правна забележка» sui marchi; riscritto il testo «Гаранция за италианско качество» (non parla più di parfumi).
+- `templates/product.json` invariato: i profumi mantengono il blocco 30% essenza.
+- Base: v1.37 (salvataggio del tema live v1.35 del 09/11, con fix footer v1.36 e Clarity). Il tema live (MAIN, ID 210427281753) non risulta modificato dopo il 09/11 16:08 UTC; `config/settings_data.json`, `layout/theme.liquid`, `header-group.json`, `bb-tr.liquid`, `language-flags*.liquid`, `index/product/collection/cart.json` hanno gli stessi checksum del tema live. `footer-group.json` differisce dal live perché il live ha ancora il file scartato da Shopify (fix v1.36).
+- I prodotti vanno assegnati al template con `templateSuffix: "cosmetics"` (fatto dopo l'installazione del tema). Le traduzioni EN dei testi del tema vanno ricopiate sul nuovo tema, più il testo nuovo del blocco `r2` e dell'accordion `a1`.
+- Theme Check non disponibile: nessun controllo automatico eseguito. Non ancora validato su Shopify (il file non è stato caricato su un tema).
+
 ## v1.37 — 2026-11-09
 - Salvataggio del tema LIVE (MAIN) «beautybag/claude/theme-v1.35» (ID 210427281753, ultimo aggiornamento Shopify 09/11 16:08 UTC, commit 085e6a6) con le modifiche fatte a mano nell'editor l'8 e il 9/11.
 - `layout/theme.liquid`: aggiunto lo script Microsoft Clarity nell'`<head>` (dopo `content_for_header`).
