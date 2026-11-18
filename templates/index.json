@@ -40,7 +40,7 @@
             "btn": {
               "type": "button",
               "settings": {
-                "label": "Разгледай колекцията",
+                "label": "Открий своят аромат",
                 "link": "shopify://collections/aromati",
                 "open_in_new_tab": false,
                 "style_class": "button-custom",
